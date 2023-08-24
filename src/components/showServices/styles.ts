@@ -4,9 +4,9 @@ export const Container = styled.div`
 
   animation: fadein 1s;
 
-  .fadeout {
-            animation: fadeout 1s;
-        }
+    >.fadeout {
+            animation: fadeout .5s;
+    }
 
     >li {
         display: flex;
@@ -21,8 +21,6 @@ export const Container = styled.div`
         border: 2px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
 
         position: relative;
-
-       
 
         >button {
             width: 1.7rem;

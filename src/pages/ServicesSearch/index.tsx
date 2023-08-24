@@ -2,15 +2,16 @@ import { Container } from "./styles";
 
 import { Header } from "../../components/header";
 import { Footer } from "../../components/footer";
+import { ServicesByVin } from "../../components/servicesByVin";
 
-export function Home() {
+export function ServicesSearch() {
     return (
         <Container>
             <Header />
             <main>
-               <h1>Home</h1>
+                <ServicesByVin /> 
             </main>
             <Footer />
         </Container>
-    )
+    );
 }

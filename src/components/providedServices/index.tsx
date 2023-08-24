@@ -9,8 +9,8 @@ type WorkDone = {
 
 export function ProvidedServices() {
     const [vin, setVin] = useState('');
-    const [work, setWork] = useState<string | null>(null); //fazemos isso para dizer que o type pode iniciar de maneira diferente de WorkDone
-    const [price, setPrice] = useState<number>(0);
+    const [work, setWork] = useState<string | null>(null);
+    const [price, setPrice] = useState(0);
     const [confirmedServices, setConfirmedServices] = useState<WorkDone[]>([]);
 
     /**

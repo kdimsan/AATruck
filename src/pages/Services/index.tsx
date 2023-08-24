@@ -2,13 +2,14 @@ import { Container } from "./styles";
 
 import { Header } from "../../components/header";
 import { Footer } from "../../components/footer";
+import { ProvidedServices } from "../../components/providedServices";
 
-export function Home() {
+export function Services() { 
     return (
         <Container>
             <Header />
             <main>
-               <h1>Home</h1>
+                <ProvidedServices />
             </main>
             <Footer />
         </Container>

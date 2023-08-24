@@ -3,28 +3,34 @@ export default {
        DARK_100: "#000405",
        DARK_200: "#00070A", 
        DARK_300: "#000204",
-       BODY_BACKGROUND: "#D9D9D9",
        DARK_500: "#000C12",
        DARK_600: "#00111A",
        DARK_700: "#001119",
-       DARK_800: "#0D161B",
        DARK_900: "#0D1D25",
        DARK_1000: "#192227",
-       HEADER_FONT: "#2E3440",
-       SELECT_BACKGROUND: "#F4FCF6EF",
-       CONFIRM_BUTTON: "#328B42",
-       CONFIRM_BUTTON_FONT: "#343A40",
-
+       
        LIGHT_100: "#FFFFFF",
-       LIGHT_200: "#FFFAF1",
        LIGHT_300: "#E1E1E6",
        LIGHT_400: "#C4C4CC",
-       LIGHT_500: "#7C7C8A",
-       HEADER_BORDER: "#8E8E8E",
-       LIGHT_700: "#4D585E",
-
+       
        TOMATO_100: "#750310",
        TOMATO_400: "#AB4D55",
        CAKE_200: "#82F3FF",
+       
+       HEADER_FONT: "#282F3E",
+       H2_FONT: "#070734",
+       LIST_FONT: "#0D161B",
+       HEADER_BORDER: "#EBEBEB",
+       
+       CONFIRM_BUTTON: "#328B42",
+       CONFIRM_BUTTON_FONT: "#343A40",
+
+       SELECT_BACKGROUND: "#F4FCF6EF",
+       BODY_BACKGROUND: "#FFFAF1",
+
+       INPUT_BORDER: "#7C7C8A",
+       LIST_BORDER: "#070734",
+
+       ICON_COLOR: "#4D585E",
     }
 };
