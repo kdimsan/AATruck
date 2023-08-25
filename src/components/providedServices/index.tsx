@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Container , Form, ConfirmedServices, Service} from "./styles";
+
 import { ShowServices } from "../showServices";
+import { BackButton } from "../backButton";
 
 type WorkDone = {
     work: string;
@@ -35,6 +37,7 @@ export function ProvidedServices() {
 
     return (
         <Container>
+            <BackButton />
             <h1>Services</h1>
             <Form>
                     <label htmlFor='vin'>Type the VIN</label>

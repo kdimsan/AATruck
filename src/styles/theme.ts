@@ -20,16 +20,17 @@ export default {
        HEADER_FONT: "#282F3E",
        H2_FONT: "#070734",
        LIST_FONT: "#0D161B",
-       HEADER_BORDER: "#EBEBEB",
        
        CONFIRM_BUTTON: "#328B42",
        CONFIRM_BUTTON_FONT: "#343A40",
-
+       
        SELECT_BACKGROUND: "#F4FCF6EF",
        BODY_BACKGROUND: "#FFFAF1",
-
+       
        INPUT_BORDER: "#7C7C8A",
        LIST_BORDER: "#070734",
+       HEADER_BORDER: "#EBEBEB",
+       HOME_SECTION_BORDER: "#E1E1E1",
 
        ICON_COLOR: "#4D585E",
     }

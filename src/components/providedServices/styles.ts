@@ -3,6 +3,8 @@ import { styled } from "styled-components";
 export const Container = styled.div`
 
     >h1 {
+        margin-left: .7rem;
+        
         font-family: 'Poppins', sans-serif;
         font-size: 2.5rem;
         font-weight: 500;

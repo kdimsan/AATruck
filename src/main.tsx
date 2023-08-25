@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { ServicesSearch } from './pages/ServicesSearch';
+import { Routes } from './routes/index.js';
 
 
 import GlobalStyles from './styles/global.js';
@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <ServicesSearch />
+      <Routes />
     </ThemeProvider>
   </React.StrictMode>,
 )

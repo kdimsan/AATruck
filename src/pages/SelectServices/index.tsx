@@ -4,7 +4,7 @@ import { Header } from "../../components/header";
 import { Footer } from "../../components/footer";
 import { ProvidedServices } from "../../components/providedServices";
 
-export function Services() { 
+export function SelectServices() { 
     return (
         <Container>
             <Header />
