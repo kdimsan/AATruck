@@ -2,9 +2,7 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
 
-    >h1 {
-        margin-left: .7rem;
-        
+    >h1 {  
         font-family: 'Poppins', sans-serif;
         font-size: 2.5rem;
         font-weight: 500;
@@ -15,7 +13,7 @@ export const Container = styled.div`
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    margin: 2rem 1rem;
 
     >label {
         font-family: 'Poppins', sans-serif;

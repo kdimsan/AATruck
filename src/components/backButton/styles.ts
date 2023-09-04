@@ -9,6 +9,8 @@ export const Container = styled.button`
     background: none;
     border: none;
 
+    cursor: pointer;
+
     >svg { 
         width: 2.4rem;
         height: 2.4rem;

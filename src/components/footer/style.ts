@@ -8,9 +8,10 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    margin-top: 3rem;
+
     border-top: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
     
-
     >h1 {
         font-family: 'IBM Plex Sans', sans-serif;
         font-style: italic;
@@ -19,11 +20,11 @@ export const Container = styled.div`
 
         margin: 0 1.5rem;
     }
+
     >p {
         font-family: 'Poppins', sans-serif;
         font-weight: 500;
 
         margin: 0 1.5rem;
     }
-    
 `;

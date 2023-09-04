@@ -11,9 +11,12 @@ export const Container = styled.div`
 
     border-bottom: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
 
-    .icon { 
-        color: ${({theme}) => theme.COLORS.ICON_COLOR};
+    >.side-out {
+        animation: sidebarOut 0.4s ease-in-out;
+    }
 
+    >.icon { 
+        color: ${({theme}) => theme.COLORS.ICON_COLOR};
     }
 
     >button {
@@ -26,6 +29,8 @@ export const Container = styled.div`
 
         border: none;
         background: none;
+
+        cursor: pointer;
         
         >svg {
             width: 2rem;
@@ -33,6 +38,14 @@ export const Container = styled.div`
         }
     }
 
+    @keyframes sidebarOut {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
 
 `;
 
@@ -56,7 +69,7 @@ export const Sidebar = styled.div`
     top: 0;
     left: 0;
     
-    animation: fadeinSidebar .5s ease-in;
+    animation: fadeinSidebar .5s ease-in-out;
 
     >.sidebar-header {
        
@@ -79,6 +92,8 @@ export const Sidebar = styled.div`
 
             border: none;
             background: none;
+
+            cursor: pointer;
         
             >svg {
                 width: 2rem;
@@ -102,24 +117,12 @@ export const Sidebar = styled.div`
     }
 
     @keyframes fadeinSidebar {
-        from {
-            opacity: 0;
-            width: 0;
+        0% {
+            transform: translateX(-100%);
         }
-        to {
-            opacity: 1;
-            width: 80%;
-        }
-    }
+        100% {
 
-    @keyframes fadeoutSidebar {
-        from {
-            opacity: 1;
-            width: 80%;
-        }
-        to {
-            opacity: 0;
-            width: 0;
+            transform: translateX(0%);
         }
     }
 `;

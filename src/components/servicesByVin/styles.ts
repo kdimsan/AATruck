@@ -11,7 +11,7 @@ export const Container = styled.div`
     }
 
     >input {
-        width: 80%;
+
 
         padding: .5rem;
         margin: 0 1rem;
@@ -32,28 +32,5 @@ export const Container = styled.div`
 `;
 
 export const ServicesHistory = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-
-    padding: 1rem;
-
-    border-radius: .5rem;
-
-    >li {
-        display: flex;
-        flex-direction: column;
-
-        list-style: none;
-
-        padding: 1rem 1rem;
-
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.3rem;
-        font-weight: 500;
-        color: ${({theme}) => theme.COLORS.LIST_FONT};
-
-        border: 1px solid ${({theme}) => theme.COLORS.LIST_BORDER};
-        border-radius: .5rem;
-    }
+   
 `;

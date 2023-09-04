@@ -20,6 +20,7 @@ export default {
        HEADER_FONT: "#282F3E",
        H2_FONT: "#070734",
        LIST_FONT: "#0D161B",
+       VEHICLE_INFO_FONT: "#353541",
        
        CONFIRM_BUTTON: "#328B42",
        CONFIRM_BUTTON_FONT: "#343A40",

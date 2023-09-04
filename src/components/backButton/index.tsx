@@ -1,16 +1,13 @@
-import { useNavigate } from "react-router-dom"
 import { Container } from "./styles";
 import { FiChevronLeft } from "react-icons/fi";
 
-export function BackButton() {
+interface BackButtonProps {
+    onClick: () => void;
+}
 
-    const navigate = useNavigate();
-
-    const handlePreviousPage = () => {
-        navigate(-1);
-    }
-    return ( 
-        <Container onClick={ handlePreviousPage }>
+export function BackButton({ onClick }: BackButtonProps) {
+    return (
+        <Container onClick={ onClick }>
             <FiChevronLeft />
             <span>Voltar</span>
         </Container>

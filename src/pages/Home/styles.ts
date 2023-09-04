@@ -1,12 +1,23 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-    width: 100%;
+    max-width: 100%;
     height: 100vh;
 
     display: flex;
     flex-direction: column;
 
+    animation: movein 0.5s ease-in;
+
+    >.move-out {
+        animation: moveout 0.5s;
+    }
+`;
+
+export const Content = styled.div`
+        display: flex;
+        flex-direction: column;
+        flex: 1;
     >main { 
         display: flex;
         flex-direction: column;
@@ -19,10 +30,9 @@ export const Container = styled.div`
             font-weight: 600;
             color: ${({theme}) => theme.COLORS.LIST_FONT};
         }
-
     }
-
 `;
+
 
 export const PagesSection = styled.div`
     display: flex;
@@ -39,6 +49,8 @@ export const PagesSection = styled.div`
 
     border: 1px solid ${({theme}) => theme.COLORS.HOME_SECTION_BORDER};
     border-radius: .5rem;
+
+    cursor: pointer;
 
     >a {
         border-bottom: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
