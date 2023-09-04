@@ -28,7 +28,7 @@ export const Form = styled.div`
             margin-bottom: .5rem;
 
             background-color: ${({theme}) => theme.COLORS.SELECT_BACKGROUND};
-            border: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
+            border: 1px solid ${({theme}) => theme.COLORS.INPUT_BORDER};
             border-radius: .5rem; 
         }
     }
@@ -53,10 +53,12 @@ export const VehicleInformation = styled.div`
     }
 
     >div >h3 {
-            font-family: 'Poppins',sans-serif;
-            font-size: 1.3rem;
-            color: ${({theme}) => theme.COLORS.VEHICLE_INFO_FONT};
+        margin: 3px 0;
 
-            border-bottom: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
+        font-family: 'Poppins',sans-serif;
+        font-size: 1.3rem;
+        color: ${({theme}) => theme.COLORS.VEHICLE_INFO_FONT};
+
+        border-bottom: 1px solid ${({theme}) => theme.COLORS.INPUT_BORDER};
     }
 `;

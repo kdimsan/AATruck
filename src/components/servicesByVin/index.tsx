@@ -1,23 +1,30 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Container } from "./styles";
 import { ServicesHistory } from "../servicesHistory";
-
+import { BackButton } from "../backButton";
 export function ServicesByVin() {
 
-    const [vinNumber, setVinNumber] = useState("");
+    const navigate = useNavigate();
+    const [plate, setPlate] = useState("");
+
+    const handleBack = () => {
+        navigate(-1);
+    }
 
     return(
         <Container>
-            <label htmlFor="vin">Search the VIN</label>
+            <BackButton onClick={handleBack} />
+            <label htmlFor="plate">Search by plate</label>
             <input
-                onChange={ (e) => setVinNumber(e.target.value) }
-                id="vin" 
+                onChange={ (e) => setPlate(e.target.value) }
+                id="plate" 
                 type="text" 
-                placeholder="Insert the vin" 
+                placeholder="Insert the plate" 
             />
             <h2>Services done</h2>
-            <ServicesHistory value={vinNumber} />
+            <ServicesHistory value={plate} />
         </Container>
     )
 }

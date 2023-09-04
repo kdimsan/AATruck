@@ -29,7 +29,7 @@ export const Form = styled.form`
         margin-bottom: .5rem;
 
         background-color: ${({theme}) => theme.COLORS.SELECT_BACKGROUND};
-        border: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
+        border: 1px solid ${({theme}) => theme.COLORS.INPUT_BORDER};
         border-radius: .5rem;
     }
     

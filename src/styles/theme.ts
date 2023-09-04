@@ -28,7 +28,7 @@ export default {
        SELECT_BACKGROUND: "#F4FCF6EF",
        BODY_BACKGROUND: "#FFFAF1",
        
-       INPUT_BORDER: "#7C7C8A",
+       INPUT_BORDER: "#E5E5E5",
        LIST_BORDER: "#070734",
        HEADER_BORDER: "#EBEBEB",
        HOME_SECTION_BORDER: "#E1E1E1",
