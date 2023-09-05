@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Container } from "./styles";
 import { ServicesHistory } from "../servicesHistory";
 import { BackButton } from "../backButton";
-export function ServicesByVin() {
+
+export function ServicesByPlate() {
 
     const navigate = useNavigate();
     const [plate, setPlate] = useState("");

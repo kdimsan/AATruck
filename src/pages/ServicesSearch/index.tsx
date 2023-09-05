@@ -2,14 +2,14 @@ import { Container } from "./styles";
 
 import { Header } from "../../components/header";
 import { Footer } from "../../components/footer";
-import { ServicesByVin } from "../../components/servicesByVin";
+import { ServicesByPlate } from "../../components/servicesByPlate";
 
 export function ServicesSearch() {
     return (
         <Container>
             <Header />
             <main>
-                <ServicesByVin /> 
+                <ServicesByPlate /> 
             </main>
             <Footer />
         </Container>

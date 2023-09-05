@@ -53,7 +53,7 @@ export function ProvidedServices() {
                     onChange={(e) => setPrice(+e.target.value)} 
                     id='price' 
                     type="number" 
-                    placeholder='$ XX,XX' 
+                    placeholder='$ XX,XX'
                 />
                 <button onClick={(e) => handleConfirmedServices(e) }>Confirm</button>
             </Form>
