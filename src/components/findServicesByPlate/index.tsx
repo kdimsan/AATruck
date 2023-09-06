@@ -5,7 +5,7 @@ import { Container } from "./styles";
 import { ServicesHistory } from "../servicesHistory";
 import { BackButton } from "../backButton";
 
-export function ServicesByPlate() {
+export function FindServicesByPlate() {
 
     const navigate = useNavigate();
     const [plate, setPlate] = useState("");

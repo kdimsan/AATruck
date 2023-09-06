@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Container , Form, ConfirmedServices, Service} from "./styles";
 
-import { ShowServices } from "../showServices";
+import { ShowProvidedServices } from "../showProvidedServices";
 import { VehicleForm } from "../vehicleForm";
 
 type WorkDone = {
@@ -62,7 +62,7 @@ export function ProvidedServices() {
                     {
                         confirmedServices.map((service, index) => {
                             return (
-                                <ShowServices 
+                                <ShowProvidedServices 
                                     key={ String(index) }
                                     value={ service } 
                                     onClick={( deleted ) => handleRemoveService(deleted) }

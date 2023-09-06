@@ -5,7 +5,7 @@ import { Container, Content } from "./styles";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/footer";
 import { BackButton } from "../../components/backButton";
-import { ProvidedServices } from "../../components/providedServices";
+import { ProvidedServices } from "../../components/provideServices";
 
 
 export function SelectServices() {

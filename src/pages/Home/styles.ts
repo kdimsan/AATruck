@@ -27,6 +27,7 @@ export const Content = styled.div`
 
         >h1 {
             font-family: 'Noto Sans', sans-serif;
+            font-size: 2.5rem;
             font-weight: 600;
             color: ${({theme}) => theme.COLORS.LIST_FONT};
         }
@@ -39,7 +40,7 @@ export const PagesSection = styled.div`
     flex-direction: column;
     flex: 1;
 
-    margin: 1rem .5rem;
+    margin: 1rem 0;
     padding: 2rem;
     gap: 2rem;
 

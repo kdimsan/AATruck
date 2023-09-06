@@ -12,7 +12,7 @@ interface ShowServicesProps {
     onClick: (value: ServiceType) => void;
 }
 
-export function ShowServices( { value, onClick }: ShowServicesProps ) {
+export function ShowProvidedServices( { value, onClick }: ShowServicesProps ) {
 
     const [fadingOut, setFadingOut] = useState(false);
 

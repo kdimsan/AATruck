@@ -11,7 +11,7 @@ export default {
        
        LIGHT_100: "#FFFFFF",
        LIGHT_300: "#E1E1E6",
-       LIGHT_400: "#C4C4CC",
+       LIGHT_400: "#C8C8C8",
        
        TOMATO_100: "#750310",
        TOMATO_400: "#AB4D55",
@@ -21,17 +21,19 @@ export default {
        H2_FONT: "#070734",
        LIST_FONT: "#0D161B",
        VEHICLE_INFO_FONT: "#353541",
+       CONFIRM_BUTTON_FONT: "#25292D",
+       LOGIN_FONT:"#303030",
+       
        
        CONFIRM_BUTTON: "#328B42",
-       CONFIRM_BUTTON_FONT: "#343A40",
-       
        SELECT_BACKGROUND: "#F4FCF6EF",
        BODY_BACKGROUND: "#FFFAF1",
        
        INPUT_BORDER: "#E5E5E5",
        LIST_BORDER: "#070734",
        HEADER_BORDER: "#EBEBEB",
-       HOME_SECTION_BORDER: "#E1E1E1",
+       HOME_SECTION_BORDER: "#C9C9C9",
+       CONFIRM_BUTTON_BORDER: "#C9C9C9",
 
        ICON_COLOR: "#4D585E",
     }
