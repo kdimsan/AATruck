@@ -3,12 +3,16 @@ import { styled } from "styled-components";
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
+    flex: 1;
 
-    margin: 3rem 5rem;
+    margin: 0 5rem;
 
     >h1 {
-            font-family: 'Noto Sans', sans-serif;
-            color: ${({theme}) => theme.COLORS.LIST_FONT};
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 2.3rem;
+        color: ${({theme}) => theme.COLORS.TITLES_FONT};
+
+        margin-bottom: 1rem;
     }
 
     >input {
@@ -16,7 +20,7 @@ export const Container = styled.div`
         color: ${({theme}) => theme.COLORS.HEADER_FONT};
 
         padding: .5rem 1rem;
-        margin-bottom: .5rem;
+        margin-bottom: 1rem;
 
         background-color: ${({theme}) => theme.COLORS.SELECT_BACKGROUND};
         border: 1px solid ${({theme}) => theme.COLORS.INPUT_BORDER};
@@ -25,9 +29,32 @@ export const Container = styled.div`
 
     >label {
         font-family: 'Poppins', sans-serif;
-        font-size: 1.4rem;
-        margin-bottom: .3rem;
+        font-size: 1.5rem;
+
+        margin-bottom: 3px;
+    }
+    >p { 
+        margin: 1.5rem 0 8px 0;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 500;
     }
 `;
 
-export const AddedWork = styled.div``;
+export const AddedWork = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+
+    >span {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 400;
+
+        padding: 3px 5px;
+
+        border: 1px solid ${({theme}) => theme.COLORS.HOME_SECTION_BORDER};
+        border-radius: 5px;
+    }
+`;

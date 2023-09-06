@@ -65,7 +65,7 @@ export function ProvidedServices() {
                                 <ShowProvidedServices 
                                     key={ String(index) }
                                     value={ service } 
-                                    onClick={( deleted ) => handleRemoveService(deleted) }
+                                    onClick={ (deleted) => handleRemoveService(deleted) }
                                 />
                             )
                         })
