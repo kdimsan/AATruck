@@ -8,7 +8,7 @@ interface ConfirmButtonProps {
 export function ConfirmButton({ title, onClick }: ConfirmButtonProps) { 
     return (
         <Container onClick={ onClick }>
-            <button>{title}</button>
+            {title}
         </Container>
     )
 }
