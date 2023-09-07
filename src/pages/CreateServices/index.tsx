@@ -1,24 +1,34 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
 import { AddWork } from "../../components/addWork";
-import { Container } from "./styles";
+import { Container, Content } from "./styles";
 import { BackButton } from "../../components/backButton";
 
 export function CreateServices() {
     const navigate = useNavigate();
+    const [moveOut, setMoveOut] = useState(false);
 
     const handleBackButton = () => {
-        navigate(-1);
+        setMoveOut(true);
+        setTimeout(() => {
+            navigate(-1);
+        }, 400);
     }
     return (
         <Container>
-            <Header />
-            <BackButton onClick={handleBackButton} />
-            <main>
-                <AddWork />
-            </main>
-            <Footer />
+            <Content 
+                className={ moveOut ? "move-out" : "" }
+                onAnimationEnd={() => setMoveOut(false)} 
+            >
+                <Header />
+                <main>
+                    <BackButton onClick={handleBackButton} />
+                    <AddWork />
+                </main>
+                <Footer />
+            </Content>
         </Container>
     )
 }

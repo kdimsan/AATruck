@@ -4,8 +4,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;
-
-    margin: 0 5rem;
+    margin: 0 8px;
 
     >h1 {
         font-family: 'Noto Sans', sans-serif;

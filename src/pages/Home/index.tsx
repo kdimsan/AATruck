@@ -10,15 +10,21 @@ export function Home() {
     const navigate = useNavigate();
     const [moveOut, setMoveOut] = useState(false);
 
-    /*const findByVin = () => { 
-        navigate("/services-search");
-    }
+    const handleServicesSearch = () => {
+        setMoveOut(true);
+        setTimeout(() => {
+            navigate("/services-search");
+        }, 300);
+    };
 
-    const selectServices = () => {
-        navigate("/select-services");
-    } */
+    const handleCreateServices = () => {
+        setMoveOut(true);
+        setTimeout(() => {
+            navigate("/create-service");
+        }, 300);
+    }; 
 // fazer a verificação de qual página foi clicada por um value
-    const handleRoutes = () => {
+    const handleSelectServices = () => {
         setMoveOut(true);
         setTimeout(() => {
             navigate("/select-services");
@@ -37,9 +43,9 @@ export function Home() {
                     <main>
                         <h1>Home</h1>
                         <PagesSection>
-                            <a onClick={ handleRoutes }>Select work to do</a>
-                            <a onClick={ handleRoutes }>Find Work by VIN</a>
-                            <a onClick={ handleRoutes }>Select</a>
+                            <a onClick={ handleSelectServices }>Select work to do</a>
+                            <a onClick={ handleServicesSearch }>Find Work by vehicle plate</a>
+                            <a onClick={ handleCreateServices }>Create a work</a>
                         </PagesSection>
                     </main>
                 <Footer />

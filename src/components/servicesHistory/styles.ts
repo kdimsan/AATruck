@@ -4,8 +4,6 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
-    margin: 1rem 0;
-
     >h2 {
         display: flex;
         align-items: center;

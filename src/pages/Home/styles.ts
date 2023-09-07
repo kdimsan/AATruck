@@ -41,7 +41,7 @@ export const PagesSection = styled.div`
     flex: 1;
 
     margin: 1rem 0;
-    padding: 2rem;
+    padding: 3rem 2rem;
     gap: 2rem;
 
     font-family: "Poppins", sans-serif;

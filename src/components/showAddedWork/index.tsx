@@ -16,8 +16,10 @@ export function ShowAddedWork({ value, onClick }: ShowServicesProps) {
 
     return (
         <Container>
-            <Content  className={ fadingOut ? "fadeout" : "" }
-            onAnimationEnd={ () => setFadingOut(false) }>
+            <Content
+                className={ fadingOut ? "fadeout" : "" }
+                onAnimationEnd={ () => setFadingOut(false) }
+            >
                 <h4>{value.work}</h4>
                 <span>U$ {value.price.toFixed(2)}</span>
                 <button onClick={ handleRemoverClick }><IoCloseOutline /></button>

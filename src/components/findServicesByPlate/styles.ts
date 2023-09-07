@@ -4,6 +4,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
+    margin: 0 8px;
+
     >label {
         font-family: 'Noto Sans', sans-serif;
         font-size: 1.8rem;
@@ -11,10 +13,7 @@ export const Container = styled.div`
     }
 
     >input {
-
-
         padding: .5rem;
-        margin: 0 1rem;
 
         font-family: 'Poppins', sans-serif;
 

@@ -19,8 +19,6 @@ export const Content = styled.div`
     flex-direction: column;
     flex: 1;
 
-    margin: 1rem;
-
     >main { 
         flex: 1;
         margin: 1rem;

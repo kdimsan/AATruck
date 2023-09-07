@@ -5,10 +5,19 @@ export const Container = styled.div`
     flex-direction: column;
 
     width: 100%;
-    height: 100vh;
+    animation: movein 0.5s ease-in;
 
+>.move-out {
+    animation: moveout 0.5s;
+}
+`;
+
+export const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     >main { 
         flex: 1;
-        margin: 3rem 2rem;
+        margin: 1rem;
     }
 `;
