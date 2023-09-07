@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Container, Sidebar } from "./styles";
 
@@ -8,6 +9,7 @@ import {  SlMenu, SlClose } from "react-icons/sl"
 
 
 export function Header() {
+    const navigate = useNavigate();
 
     const [sidebar, setSidebar] = useState(false);
     const [sideout, setSideout] = useState(false);
@@ -24,6 +26,19 @@ export function Header() {
         }, 400)
     };
     
+    const handleRoutes = (route: string) => { 
+        setSideout(true);
+        setTimeout(() => {
+            handleSidebar();
+            setSideout(false);
+            navigate(route);
+        }, 300);
+    };
+    
+    const handleCreateWork = () =>  handleRoutes("/create-service");
+    const handleGoHome = () =>  handleRoutes("/");
+    const handleServicesSearch = () => handleRoutes("/services-search");
+    
     return (
         <Container>
             <button className="icon" onClick={ handleSidebar }> <SlMenu /> </button>
@@ -36,9 +51,9 @@ export function Header() {
                         <Logo />
                     </div>
                     <div className='sidebar-content'>
-                        <li>Home</li>
-                        <li>Check services</li>
-                        <li>List services</li>
+                        <a onClick={ handleGoHome }>Home</a>
+                        <a onClick={ handleServicesSearch }>Find by vehicle plate</a>
+                        <a onClick={ handleCreateWork }>Create work</a>
                     </div>
                 </Sidebar>
             }

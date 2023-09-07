@@ -23,7 +23,7 @@ export function Home() {
             navigate("/create-service");
         }, 300);
     }; 
-// fazer a verificação de qual página foi clicada por um value
+
     const handleSelectServices = () => {
         setMoveOut(true);
         setTimeout(() => {
@@ -40,14 +40,14 @@ export function Home() {
                 onAnimationEnd={() => setMoveOut(false)} 
             >
                 <Header />
-                    <main>
-                        <h1>Home</h1>
-                        <PagesSection>
-                            <a onClick={ handleSelectServices }>Select work to do</a>
-                            <a onClick={ handleServicesSearch }>Find Work by vehicle plate</a>
-                            <a onClick={ handleCreateServices }>Create a work</a>
-                        </PagesSection>
-                    </main>
+                <main>
+                    <h1>Home</h1>
+                    <PagesSection>
+                        <a onClick={ handleSelectServices }>Select work to do</a>
+                        <a onClick={ handleServicesSearch }>Find Work by vehicle plate</a>
+                        <a onClick={ handleCreateServices }>Create a work</a>
+                    </PagesSection>
+                </main>
                 <Footer />
             </Content>
         </Container>

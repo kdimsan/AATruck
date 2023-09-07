@@ -104,9 +104,9 @@ export const Sidebar = styled.div`
 
     >.sidebar-content {
         padding: 2rem;
-        >li {
-            list-style: none;
-
+        display: flex;
+        flex-direction: column;
+        >a {
             font-size: 2rem;
             font-family: 'Noto Sans', sans-serif;
 
