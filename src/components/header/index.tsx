@@ -1,12 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import { Container, Sidebar } from "./styles";
-
 import { Logo } from "../logo";
-
+import { Container, Sidebar } from "./styles";
 import {  SlMenu, SlClose } from "react-icons/sl"
-
 
 export function Header() {
     const navigate = useNavigate();
@@ -38,7 +34,8 @@ export function Header() {
     const handleCreateWork = () =>  handleRoutes("/create-service");
     const handleGoHome = () =>  handleRoutes("/");
     const handleServicesSearch = () => handleRoutes("/services-search");
-    
+    const handleSelectWork = () => handleRoutes("/select-services");
+
     return (
         <Container>
             <button className="icon" onClick={ handleSidebar }> <SlMenu /> </button>
@@ -52,8 +49,9 @@ export function Header() {
                     </div>
                     <div className='sidebar-content'>
                         <a onClick={ handleGoHome }>Home</a>
-                        <a onClick={ handleServicesSearch }>Find by vehicle plate</a>
                         <a onClick={ handleCreateWork }>Create work</a>
+                        <a onClick={ handleServicesSearch }>Find by vehicle plate</a>
+                        <a onClick={ handleSelectWork }>Select work to do</a>
                     </div>
                 </Sidebar>
             }

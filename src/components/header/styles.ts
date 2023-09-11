@@ -113,6 +113,8 @@ export const Sidebar = styled.div`
             margin-bottom: 1.2rem;
 
             border-bottom: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
+
+            cursor: pointer;
         }
     }
 

@@ -1,21 +1,22 @@
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 import { ConfirmButton } from "../confirmButton";
 import { Container, AddedWork } from "./styles";
 import { ShowAddedWork } from "../showAddedWork";
+import { Input } from "../input";
 
-type AddedWork = {
+interface AddedWorkProps {
     work: string;
     price: number;
 }
 
 export function AddWork() {
     const [work, setWork] = useState("");
-    const [price, setPrice] = useState<number>();
-    const [addedWork, setAddedWork] = useState<AddedWork[]>([]);
+    const [price, setPrice] = useState<number>(0);
+    const [addedWork, setAddedWork] = useState<AddedWorkProps[]>([]);
     
     const handleAddWork = () => {
         if(work && price) {
-            const newWork = {
+            const newWork: AddedWorkProps = {
                 work: work,
                 price: price
             };
@@ -29,25 +30,33 @@ export function AddWork() {
         setAddedWork((prevState) => prevState.filter(work => work !== deleted));
     };
 
+    const handleWorkInput = (e: ChangeEvent<HTMLInputElement>) => {
+        setWork(e.target.value);
+    };
+    const handlePriceInput = (e: ChangeEvent<HTMLInputElement>) => {
+        setPrice(+e.target.value)
+    };
+
     return (
         <Container> 
                 <h1>Create a work</h1>
-                
-                    <label htmlFor="work">Work</label>
-                    <input
+                    <Input
+                        htmlFor="work"
+                        labelText="Work"
                         id="work"
                         type="text"
-                        placeholder="Ex.: Interior cleaning"
-                        onChange={(e) => setWork(e.target.value)} 
-                        value={work}
+                        placeholder="Ex.: Interior Cleaning"
+                        onChange={ handleWorkInput }
+                        value= { work }
                     />
-                    <label htmlFor="price">Price</label>
-                    <input 
+                    <Input 
+                        htmlFor="price"
+                        labelText="Work"
                         id="price"
                         type="number"
-                        placeholder="Ex.: Interior cleaning"
-                        onChange={(e) => setPrice(+e.target.value)} 
-                        value={price}
+                        placeholder="0"
+                        onChange={ handlePriceInput }
+                        value={ price.toString() }
                     />
                     <ConfirmButton onClick={ handleAddWork } title={"Confirm"} />
                     <p>All of the works registred in your account can be seen here</p>
@@ -56,9 +65,9 @@ export function AddWork() {
                             addedWork.map((addedWork, index) => {
                                 return (
                                     <ShowAddedWork
-                                    key={index}
-                                    value={addedWork}
-                                    onClick={deleted => handleRemoveWork(deleted)}
+                                        key={ index }
+                                        value={ addedWork }
+                                        onClick={ deleted => handleRemoveWork(deleted) }
                                     />
                                 )
                             })
