@@ -15,7 +15,7 @@ export function SignIn() {
                 <Form>
                     <label htmlFor="email">Email</label>
                     <input 
-                        type="text"
+                        type="email"
                         placeholder="example@example.com"
                         id="email"
                     />

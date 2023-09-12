@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Container, Form } from "./styles";
+import { Input } from "../../components/input";
 
 export function SignUp() {
     const navigate = useNavigate();
@@ -13,23 +14,26 @@ export function SignUp() {
             <main>
                 <h1>Sign up</h1>
                 <Form>
-                <label htmlFor="name">Name</label>
-                    <input 
-                        type="text"
-                        placeholder="Jhon Smith"
+                    <Input
+                        labelText="Name"
+                        htmlFor="name"
                         id="name"
-                    />
-                    <label htmlFor="email">Email</label>
-                    <input 
+                        placeholder="Jhon Vard"
                         type="text"
-                        placeholder="example@example.com"
-                        id="email"
                     />
-                    <label htmlFor="password">Password</label>
-                    <input 
-                        type="password"
-                        placeholder="Password"
+                    <Input
+                        labelText="Email"
+                        htmlFor="email"
+                        id="email"
+                        placeholder="example@example.com"
+                        type="email"
+                    />
+                    <Input
+                        labelText="Password"
+                        htmlFor="password"
                         id="password"
+                        placeholder="*****"
+                        type="password" 
                     />
                     <button>Create account</button>
                 </Form>

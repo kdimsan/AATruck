@@ -15,6 +15,15 @@ export const InputContent = styled.div`
         border: 1px solid ${({theme}) => theme.COLORS.INPUT_BORDER};
         border-radius: .5rem
     }
+    >input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+    >input[type="number"] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
 
     >label {
         font-family: 'Poppins', sans-serif;

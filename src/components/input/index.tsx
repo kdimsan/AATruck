@@ -5,10 +5,10 @@ interface InputProps {
     id: string;
     type: string;
     placeholder: string;
-    value: string | number;
+    value?: string | number;
     htmlFor: string;
     labelText: string;
-    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export function Input( {id, type, placeholder, value, htmlFor, labelText, onChange}: InputProps ) { 

@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Container, VehicleInformation, Form } from "./styles";
+import { Input } from "../input";
 
 export function VehicleForm() {
     const [vin, setVin] = useState('');
@@ -8,55 +9,65 @@ export function VehicleForm() {
     const [model, setModel] = useState('');
     const [year, setYear] = useState('');
 
+    const handleYearInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setYear(e.target.value);
+    }
+    const handleModelInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setModel(e.target.value);
+    }
+    const handleBrandInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setBrand(e.target.value);
+    }
+    const handlePlateInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setPlate(e.target.value);
+    }
+    const handleVinInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setVin(e.target.value);
+    }
+
     return (
         <Container>
             <Form>
-                <div className="vin_input">
-                    <label htmlFor='vin'>Type the VIN</label>
-                    <input 
-                        type="text"
-                        onChange={ (e) => setVin(e.target.value) } 
-                        id='vin' 
-                        placeholder='XXXX-XXXX-XXXX-XXXX'
-                    />
-                </div>
-                <div className="plate_input">
-                    <label htmlFor="plate">Vehicle plate</label>
-                    <input
-                        type="text"
-                        onChange={ (e) => setPlate(e.target.value) } 
-                        id='plate' 
-                        placeholder='ABC-123'
-                    />
-                </div>
-                <div className="brand_input">
-                    <label htmlFor="brand">Vehicle brand</label>
-                    <input
-                        type="text"
-                        onChange={(e) => setBrand(e.target.value)} 
-                        id='brand' 
-                        placeholder='Ford'
-                    />
-                </div>
-                <div className="model_input">
-                    <label htmlFor="model">Model</label>
-                    <input
-                        type="text"
-                        onChange={(e) => setModel(e.target.value)} 
-                        id='model' 
-                        placeholder='Maverick'
-                    />
-                </div>
-                <div className="year_input">
-                    <label htmlFor="year">Year of production</label>
-                    <input
-                        type="number"
-                        onChange={(e) => setYear(e.target.value)} 
-                        id='year' 
-                        placeholder='1980'
-                    />
-                </div>
-
+                 <Input 
+                    labelText="Type the VIN number"
+                    htmlFor="vin"
+                    id="vin"
+                    type="text"
+                    placeholder="XXXX-XXXX-XXXX"
+                    onChange={ handleVinInput }
+                />
+                <Input 
+                    labelText="Vehicle plate"
+                    htmlFor="plate"
+                    id="plate"
+                    type="text"
+                    placeholder="ABC-123"
+                    onChange={ handlePlateInput }
+                />
+                <Input 
+                    labelText="Brand"
+                    htmlFor="brand"
+                    id="brand"
+                    type="text"
+                    placeholder="Ford"
+                    onChange={ handleBrandInput }
+                />
+                <Input 
+                    labelText="Model"
+                    htmlFor="model"
+                    id="model"
+                    type="text"
+                    placeholder="Maverick"
+                    onChange={ handleModelInput }
+                />
+                <Input 
+                    labelText="Year of production"
+                    htmlFor="year"
+                    id="year"
+                    type="number"
+                    placeholder="1980"
+                    onChange={ handleYearInput }
+                />
             </Form>
             <VehicleInformation>
                 <h2>Vehicle informations</h2>
