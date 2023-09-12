@@ -15,24 +15,6 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     margin: 2rem 1rem;
-
-    >label {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.4rem;
-        margin-bottom: .3rem;
-    }
-    
-    >select, input {
-        font-family: 'Poppins', sans-serif;
-        color: ${({theme}) => theme.COLORS.HEADER_FONT};
-
-        padding: .3rem;
-        margin-bottom: .5rem;
-
-        background-color: ${({theme}) => theme.COLORS.SELECT_BACKGROUND};
-        border: 1px solid ${({theme}) => theme.COLORS.INPUT_BORDER};
-        border-radius: .5rem;
-    }
     
     >button {
         font-family: 'Noto Sans', sans-serif;

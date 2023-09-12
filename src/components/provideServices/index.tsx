@@ -3,6 +3,8 @@ import { Container , Form, ConfirmedServices, Service} from "./styles";
 
 import { ShowProvidedServices } from "../showProvidedServices";
 import { VehicleForm } from "../vehicleForm";
+import { Select } from "../select";
+import { Input } from "../input";
 
 type WorkDone = {
     work: string;
@@ -28,34 +30,45 @@ export function ProvidedServices() {
                 price: price
             };
         setConfirmedServices((prevState) => [...prevState, newWorkDone]);
+        setPrice(0);
+        setWork("");
         }
     };
-
+    
     const handleRemoveService = (deleted: object) => {
         setConfirmedServices((prevState) => prevState.filter((service) => service !== deleted));
     };
+    
+    const handleSelectWork = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setWork(e.target.value);
+    }
+
+    const handleInputPrice = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setPrice(+e.target.value);
+    }
 
     return (
         <Container>
             <h1>Services</h1>
             <VehicleForm />
             <Form>
-                <label htmlFor='work'>Select an option</label>
-                <select onChange={(e) => setWork(e.target.value)} id='work'> 
-                    <option value=''></option>
-                    <option value='External wash'>External wash</option>
-                    <option value='Wax'>Wax</option>
-                    <option value='Interior cleanising'>Interior cleanising</option>
-                </select>
-
-                <label htmlFor='price'>Price</label>
-                <input 
-                    onChange={(e) => setPrice(+e.target.value)} 
-                    id='price' 
-                    type="number" 
-                    placeholder='$ XX,XX'
+                <Select
+                    htmlFor="work"
+                    id="work"
+                    labelText="Select Work:"
+                    onChange={ handleSelectWork }
                 />
-                <button onClick={(e) => handleConfirmedServices(e) }>Confirm</button>
+
+                <Input 
+                    htmlFor="price"
+                    id="price"
+                    labelText="Price:"
+                    type="number"
+                    placeholder="$XX,XX"
+                    value={ price.toString() }
+                    onChange={ handleInputPrice } 
+                />
+                <button onClick={ (e) => handleConfirmedServices(e) }>Confirm</button>
             </Form>
             <ConfirmedServices>
                 <Service>
