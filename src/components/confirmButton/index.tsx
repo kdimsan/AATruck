@@ -2,12 +2,13 @@ import { Container } from "./styles";
 
 interface ConfirmButtonProps {
     title: string;
+    hidden?: boolean;
     onClick?: () => void;
 }
 
-export function ConfirmButton({ title, onClick }: ConfirmButtonProps) { 
+export function ConfirmButton({ title, hidden, onClick }: ConfirmButtonProps) { 
     return (
-        <Container onClick={ onClick }>
+        <Container hidden={hidden} onClick={ onClick }>
             {title}
         </Container>
     )

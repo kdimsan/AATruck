@@ -24,6 +24,22 @@ export const Container = styled.div`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+    }
+`;
 
+export const ButtonsOrganizer = styled.div`
+    gap: 1rem;
+
+    margin: 1rem 0 2rem;
+
+    >button {
+        font-family: 'Poppins',sans-serif;
+        color: ${({theme}) => theme.COLORS.CONFIRM_BUTTON_FONT};
+        padding: 5px 1rem;
+
+        border: 1px solid ${({theme}) => theme.COLORS.CONFIRM_BUTTON_BORDER};
+        border-radius: 5px;
+
+        background-color: ${({theme}) => theme.COLORS.CONFIRM_BUTTON};
     }
 `;

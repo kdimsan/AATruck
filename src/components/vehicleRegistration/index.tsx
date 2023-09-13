@@ -1,11 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { Container } from "./styles";
-
+import { Container, ButtonsOrganizer } from "./styles";
 
 import { Input } from "../input";
 import { ConfirmButton } from "../confirmButton";
-import { RegistredVehicleConfig } from "../registredVehicleConfig";
+//import { RegistredVehicleConfig } from "../registredVehicleConfig";
 
 export interface ConfirmVehicle {
     vin: string;
@@ -16,12 +16,17 @@ export interface ConfirmVehicle {
 }
 
 export function VehicleRegistration() {
-    const [vin, setVin] = useState<string | null>();
-    const [plate, setPlate] = useState<string | null>();
-    const [brand, setBrand] = useState<string | null>();
-    const [model, setModel] = useState<string | null>();
-    const [year, setYear] = useState<string | null>();
+    const [vin, setVin] = useState<string>("");
+    const [plate, setPlate] = useState<string>("");
+    const [brand, setBrand] = useState<string>("");
+    const [model, setModel] = useState<string>("");
+    const [year, setYear] = useState<string>("");
+
     const [confirmVehicle, setConfirmVehicle] = useState<ConfirmVehicle[]>([]);
+    const [confirmButton, setConfirmButton] = useState(false);
+    const [buttonsOrganizer, setButtonsOrganizer] = useState("none");
+
+    const navigate = useNavigate();
 
     const handleYearInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setYear(e.target.value);
@@ -39,6 +44,24 @@ export function VehicleRegistration() {
         setVin(e.target.value);
     };
 
+    const handleNavigateHome = () => {
+        navigate("/");
+    };
+
+    const handleAddVehicle = () => {
+        setButtonsOrganizer("none");
+        setConfirmButton(false);
+        setBrand("");
+        setModel("");
+        setVin("");
+        setPlate("");
+        setYear("");
+    };
+
+    const handleNavigateToWork = () => {
+        navigate("/select-services")
+    };
+
     const handleConfirmVehicle = () => {
         if(vin && plate && brand && model && year) {
             const vehicleConfirmation = {
@@ -49,15 +72,13 @@ export function VehicleRegistration() {
                 plate: plate
             };
             setConfirmVehicle((prevState) => [...prevState, vehicleConfirmation]);
-            setBrand("");
-            setModel("");
-            setVin("");
-            setPlate("");
-            setYear("");
+            setConfirmButton(true);
+            setButtonsOrganizer("flex");
+            alert("Vehicle registred successfully");
         }
-    };
-
-
+    }; 
+    console.log(confirmVehicle);
+    
     return(
         <Container>
             
@@ -69,6 +90,7 @@ export function VehicleRegistration() {
                     id="vin"
                     type="text"
                     placeholder="XXXX-XXXX-XXXX"
+                    value={vin}
                     onChange={ handleVinInput }
                 />
                 <Input 
@@ -77,6 +99,7 @@ export function VehicleRegistration() {
                     id="plate"
                     type="text"
                     placeholder="ABC-123"
+                    value={plate}
                     onChange={ handlePlateInput }
                 />
                 <Input 
@@ -85,6 +108,7 @@ export function VehicleRegistration() {
                     id="brand"
                     type="text"
                     placeholder="Ford"
+                    value={brand}
                     onChange={ handleBrandInput }
                 />
                 <Input 
@@ -93,6 +117,7 @@ export function VehicleRegistration() {
                     id="model"
                     type="text"
                     placeholder="Maverick"
+                    value={model}
                     onChange={ handleModelInput }
                 />
                 <Input 
@@ -101,11 +126,23 @@ export function VehicleRegistration() {
                     id="year"
                     type="number"
                     placeholder="1980"
+                    value={year}
                     onChange={ handleYearInput }
                 />
             </form>
-            <ConfirmButton onClick={ handleConfirmVehicle } title="Confirm vehicle" />
-            <div className="vehicle-registred">
+            <ConfirmButton 
+                hidden={ confirmButton } 
+                onClick={ handleConfirmVehicle } 
+                title="Confirm vehicle" 
+            />
+
+            <ButtonsOrganizer style={{display:buttonsOrganizer}}>
+                <button onClick={ handleNavigateHome }>Home</button>
+                <button onClick={ handleAddVehicle }>Add another vehicle</button>
+                <button onClick={ handleNavigateToWork }>Select work</button>
+            </ButtonsOrganizer>
+            
+            {/* <div className="vehicle-registred">
                 {
                     confirmVehicle.map((vehicle, index) => {
                         return(
@@ -116,7 +153,7 @@ export function VehicleRegistration() {
                         )
                     })
                 }
-            </div>
+            </div> */}
         </Container>
     )
 }
