@@ -21,7 +21,9 @@ export const Container = styled.div`
     }
 
     .vehicle-registred {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
     }
 `;
