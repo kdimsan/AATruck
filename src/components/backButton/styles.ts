@@ -12,8 +12,8 @@ export const Container = styled.button`
     cursor: pointer;
 
     >svg { 
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 2rem;
+        height: 2rem;
     }
 
     >span {
