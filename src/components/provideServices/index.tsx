@@ -17,7 +17,7 @@ export function ProvidedServices() {
     const [price, setPrice] = useState(0);
     const [confirmedServices, setConfirmedServices] = useState<WorkDone[]>([]);
 
-    /**
+    /*
      * * As opções de serviço serão criadas pelo usuário.
      * * O button do Form final fará apenas o POST para o banco de dados.
      */

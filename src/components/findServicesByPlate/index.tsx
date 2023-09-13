@@ -14,15 +14,16 @@ export function FindServicesByPlate() {
 
     return(
         <Container>
+            <h2>Find services by vehicle plate</h2>
            <Input 
-                labelText="Write the plate"
+                labelText="Write the vehicle plate:"
                 htmlFor="plate"
                 id="plate"
                 type="text"
                 placeholder="ABC-123"
                 onChange={ handlePlateInput }
            />
-            <h2>Services done</h2>
+            <h3>Services done</h3>
             <ServicesHistory value={plate} />
         </Container>
     )

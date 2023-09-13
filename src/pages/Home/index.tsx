@@ -31,7 +31,12 @@ export function Home() {
         }, 300);
     };
 
-
+    const handleRegisterVehicle = () => {
+        setMoveOut(true);
+        setTimeout(() => {
+            navigate("/register-vehicle");
+        }, 300);
+    };
 
     return (
         <Container>
@@ -46,6 +51,7 @@ export function Home() {
                         <a onClick={ handleSelectServices }>Select work to do</a>
                         <a onClick={ handleServicesSearch }>Find Work by vehicle plate</a>
                         <a onClick={ handleCreateServices }>Create a work</a>
+                        <a onClick={ handleRegisterVehicle }>Register vehicle</a>
                     </PagesSection>
                 </main>
                 <Footer />

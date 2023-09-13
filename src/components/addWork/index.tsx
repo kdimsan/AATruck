@@ -51,7 +51,7 @@ export function AddWork() {
                     />
                     <Input 
                         htmlFor="price"
-                        labelText="Work"
+                        labelText="Price"
                         id="price"
                         type="number"
                         placeholder="0"

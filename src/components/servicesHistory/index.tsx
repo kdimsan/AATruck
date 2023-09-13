@@ -8,7 +8,7 @@ export function ServicesHistory( { value }: ServicesHistoryProps ) {
     return (
         <Container>
 
-            {value ? <h2>Plate: { value }</h2> : ""}
+            {value ? <h2>Vehicle plate: { value }</h2> : ""}
             
             <History>
                 <li>
