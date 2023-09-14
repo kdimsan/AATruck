@@ -1,20 +1,20 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-    margin: 0 1rem;
-
+    margin: 0 2rem;
     >h1 {  
         font-family: 'Poppins', sans-serif;
         font-size: 2.5rem;
         font-weight: 500;
         color: ${({theme}) => theme.COLORS.HEADER_FONT};
+
+        border-bottom: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
     }
 `;
 
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
-    margin: 2rem 1rem;
     
     >button {
         font-family: 'Noto Sans', sans-serif;
@@ -38,8 +38,6 @@ export const ConfirmedServices = styled.div`
     justify-content: center;
     font-family: 'Poppins', sans-serif;
 
-    margin: 1rem;
-
     >h2 { 
         font-size: 1.8rem;
     }
@@ -54,5 +52,4 @@ export const Service = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
-
 `;

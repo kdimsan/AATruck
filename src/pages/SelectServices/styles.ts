@@ -21,10 +21,9 @@ export const Content = styled.div`
 
     >main { 
         flex: 1;
-        margin: 1rem;
     }
-`;
 
-export const BackButton = styled.button`
-    
+    >button {
+        margin: 2rem 1.5rem;
+    }
 `;

@@ -23,8 +23,8 @@ export function CreateServices() {
                 onAnimationEnd={() => setMoveOut(false)} 
             >
                 <Header />
+                <BackButton onClick={handleBackButton} />
                 <main>
-                    <BackButton onClick={handleBackButton} />
                     <AddWork />
                 </main>
                 <Footer />

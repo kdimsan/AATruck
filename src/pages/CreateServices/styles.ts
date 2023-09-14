@@ -17,14 +17,13 @@ export const Content = styled.div`
     height: 100vh;
 
     >button {
-        margin: 2rem 4.5rem 1.5rem;
+            margin: 2rem 1.5rem;
     }
 
     >main {
         display: flex;
         flex-direction: column;
         flex: 1;
-        margin: 0 1rem;
     }
 `;
 

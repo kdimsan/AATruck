@@ -14,7 +14,7 @@ export function FindServicesByPlate() {
 
     return(
         <Container>
-            <h2>Find services by vehicle plate</h2>
+            <h1>Find services by vehicle plate</h1>
            <Input 
                 labelText="Write the vehicle plate:"
                 htmlFor="plate"

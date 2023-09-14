@@ -59,7 +59,7 @@ export function AddWork() {
                         value={ price.toString() }
                     />
                     <ConfirmButton onClick={ handleAddWork } title={"Confirm"} />
-                    <p>All of the works registred in your account can be seen here</p>
+                    <p>All your registered works  can be viewed here</p>
                     <AddedWork>
                         {
                             addedWork.map((addedWork, index) => {

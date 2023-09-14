@@ -4,7 +4,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
-    margin: 0 8px;
+    margin: 0 2rem;
 
     >label {
         font-family: 'Noto Sans', sans-serif;
@@ -21,10 +21,12 @@ export const Container = styled.div`
         border-radius: .5rem;
     }
 
-    >h2 {
+    >h1 {
         font-family: 'Poppins', sans-serif;
         font-size: 2rem;
         color: ${({theme}) => theme.COLORS.H2_FONT};
+        
+        border-bottom: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
 
         margin: 1.5rem 0 1rem 0;
     }

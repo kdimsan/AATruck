@@ -1,5 +1,6 @@
-import { Container } from "./style";
+import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { Container, Content } from "./style";
 
 import { BackButton } from "../../components/backButton";
 import { Header } from "../../components/header";
@@ -9,18 +10,28 @@ import { VehicleRegistration } from "../../components/vehicleRegistration";
 export function RegisterVehicle() {
     const navigate = useNavigate();
 
-    const handleBackButton = () => {
-        navigate(-1);
+    const [moveOut, setMoveOut] = useState(false);
+
+    const handleRoute = () => {
+        setMoveOut(true);
+        setTimeout(() => {
+            navigate(-1);
+        }, 400);
     };
 
     return (
         <Container>
-            <Header/>
-            <BackButton onClick={ handleBackButton }/>
-            <main>
-                <VehicleRegistration/>
-            </main>
-            <Footer/>
+            <Content
+                className={ moveOut ? "move-out" : "" }
+                onAnimationEnd={() => setMoveOut(false)} 
+            >
+                <Header/>
+                <BackButton onClick={ handleRoute }/>
+                <main>
+                    <VehicleRegistration/>
+                </main>
+                <Footer/>
+            </Content>
         </Container>
     )
 }

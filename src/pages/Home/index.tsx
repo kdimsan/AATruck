@@ -10,33 +10,18 @@ export function Home() {
     const navigate = useNavigate();
     const [moveOut, setMoveOut] = useState(false);
 
-    const handleServicesSearch = () => {
+    const handleRoutes = (route: string) => {
         setMoveOut(true);
         setTimeout(() => {
-            navigate("/services-search");
+            navigate(route);
         }, 300);
     };
 
-    const handleCreateServices = () => {
-        setMoveOut(true);
-        setTimeout(() => {
-            navigate("/create-service");
-        }, 300);
-    }; 
-
-    const handleSelectServices = () => {
-        setMoveOut(true);
-        setTimeout(() => {
-            navigate("/select-services");
-        }, 300);
-    };
-
-    const handleRegisterVehicle = () => {
-        setMoveOut(true);
-        setTimeout(() => {
-            navigate("/register-vehicle");
-        }, 300);
-    };
+    const handleAllVehiclesRoute = () => handleRoutes("/registred-vehicles");
+    const handleRegisterVehicle = () => handleRoutes("/register-vehicle");
+    const handleSelectServices = () => handleRoutes("/select-services");
+    const handleCreateServices = () => handleRoutes("/create-service");
+    const handleServicesSearch = () => handleRoutes("/services-search");
 
     return (
         <Container>
@@ -52,6 +37,7 @@ export function Home() {
                         <a onClick={ handleServicesSearch }>Find Work by vehicle plate</a>
                         <a onClick={ handleCreateServices }>Create a work</a>
                         <a onClick={ handleRegisterVehicle }>Register vehicle</a>
+                        <a onClick={ handleAllVehiclesRoute }>All vehicles</a>
                     </PagesSection>
                 </main>
                 <Footer />

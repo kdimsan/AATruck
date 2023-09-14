@@ -18,6 +18,9 @@ export const Content = styled.div`
     height: 100vh;
     >main { 
         flex: 1;
-        margin: 1rem;
+
+        >button {
+            margin: 2rem 1.5rem;
+        }
     }
 `;

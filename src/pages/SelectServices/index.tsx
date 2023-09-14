@@ -27,8 +27,8 @@ export function SelectServices() {
                 onAnimationEnd={ () => setMoveOut(false) }
             >
                 <Header />
-                <main>
                     <BackButton onClick={ handleRoute } />
+                <main>
                     <ProvidedServices />
                 </main>
                 <Footer />
