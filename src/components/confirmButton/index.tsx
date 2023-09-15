@@ -3,7 +3,7 @@ import { Container } from "./styles";
 interface ConfirmButtonProps {
     title: string;
     hidden?: boolean;
-    onClick?: () => void;
+    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export function ConfirmButton({ title, hidden, onClick }: ConfirmButtonProps) { 

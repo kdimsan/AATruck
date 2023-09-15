@@ -1,13 +1,33 @@
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Form } from "./styles";
 import { Input } from "../../components/input";
+import { ConfirmButton } from "../../components/confirmButton";
 
 export function SignUp() {
     const navigate = useNavigate();
 
-    const handleGoBack = () => {
+    const [email, setEmail] = useState("");
+    const [error, setError] = useState("");
+    
+    const verifyEmail = (email: string) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
+    const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value);
+
+
+    const handleCreateAccount = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        if(!verifyEmail(email)) {
+            setError("Invalid email");
+        }
+    };
+
+    const handleBackPage = () => {
         navigate(-1)
-    }
+    };
 
     return (
         <Container>
@@ -18,7 +38,14 @@ export function SignUp() {
                         labelText="Name"
                         htmlFor="name"
                         id="name"
-                        placeholder="Jhon Vard"
+                        placeholder="Jhon"
+                        type="text"
+                    />
+                    <Input
+                        labelText="Last name"
+                        htmlFor="lastName"
+                        id="lastName"
+                        placeholder="Vard"
                         type="text"
                     />
                     <Input
@@ -27,7 +54,9 @@ export function SignUp() {
                         id="email"
                         placeholder="example@example.com"
                         type="email"
+                        onChange={ handleEmail }
                     />
+                    {error && <div className="error-style">{error}</div>}
                     <Input
                         labelText="Password"
                         htmlFor="password"
@@ -35,9 +64,9 @@ export function SignUp() {
                         placeholder="*****"
                         type="password" 
                     />
-                    <button>Create account</button>
+                    <ConfirmButton title={"Create account"} onClick={ handleCreateAccount }/>
                 </Form>
-                <button onClick={ handleGoBack }>Already have account</button>
+                <button onClick={ handleBackPage }>Already have account</button>
             </main>
         </Container>
     )

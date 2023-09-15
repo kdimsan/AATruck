@@ -41,7 +41,7 @@ export const Container = styled.div`
     }
 `;
 
-export const Form = styled.div`
+export const Form = styled.form`
     display: flex;
     flex-direction: column;
 
@@ -50,27 +50,9 @@ export const Form = styled.div`
 
     margin: 2rem 0;
 
-    >label, input {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.4rem;
-        font-weight: 400;
-    }
-    >input {
-        padding: 3px 6px;
-        margin-bottom: 1.5rem;
-        border: 1px solid ${({theme}) => theme.COLORS.LIGHT_400};
-        border-radius: 5px;
-    }
-
-    >button {
-        padding: 6px;
-        
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-        color: ${({theme}) => theme.COLORS.CONFIRM_BUTTON_FONT};
-
-        border: 1px solid ${({theme}) => theme.COLORS.HOME_SECTION_BORDER};
-        border-radius: 5px;
-        background-color: ${({theme}) => theme.COLORS.CONFIRM_BUTTON};
+    .error-style {
+        font-family: 'Nato Sans', sans-serif;
+        color: red;
+        margin-top: -5px;
     }
 `;

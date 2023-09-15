@@ -22,7 +22,7 @@ export default {
        TITLES_FONT: "#20242C",
        LIST_FONT: "#0D161B",
        VEHICLE_INFO_FONT: "#353541",
-       CONFIRM_BUTTON_FONT: "#EBEBEB",
+       CONFIRM_BUTTON_FONT: "#FFFFFF",
        LOGIN_FONT:"#303030",
        
        
