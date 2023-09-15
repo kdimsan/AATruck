@@ -34,13 +34,15 @@ export const Content = styled.div`
 
     border: 1px solid ${({theme}) => theme.COLORS.HOME_SECTION_BORDER};
     border-radius: 5px;
+
     color: ${({theme}) => theme.COLORS.LIST_FONT};
+    box-shadow: 1px 2px 5px 1px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
 
     >h3 {
         font-family: 'Poppins', sans-serif;
         font-size: 1.5rem;
 
-        border-bottom: 1px solid ${({theme}) => theme.COLORS.HOME_SECTION_BORDER};
+        border-bottom: 1px solid ${({theme}) => theme.COLORS.INPUT_BORDER};
         margin-bottom: 1rem;
     }
 
@@ -50,7 +52,7 @@ export const Content = styled.div`
         font-size: 1.4rem;
         line-height: 1.3rem;
         margin-bottom: 1rem;
-        border-bottom: 1px solid ${({theme}) => theme.COLORS.HOME_SECTION_BORDER};
+        border-bottom: 1px solid ${({theme}) => theme.COLORS.INPUT_BORDER};
 
         >span {
             font-family: 'Poppins', sans-serif;

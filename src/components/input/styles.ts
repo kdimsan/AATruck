@@ -13,7 +13,7 @@ export const InputContent = styled.div`
 
         background-color: ${({theme}) => theme.COLORS.SELECT_BACKGROUND};
         border: 1px solid ${({theme}) => theme.COLORS.INPUT_BORDER};
-        border-radius: .5rem
+        border-radius: .5rem;
     }
     >input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
         -webkit-appearance: none;
@@ -25,6 +25,14 @@ export const InputContent = styled.div`
         appearance: textfield;
     }
 
+    >input:focus {
+        outline: 2px solid #c9c9c9;
+    }
+    
+    >input:hover {
+            outline: 2px solid #c9c9c9;
+    }
+    
     >label {
         font-family: 'Poppins', sans-serif;
         font-size: 1.5rem;

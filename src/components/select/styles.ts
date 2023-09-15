@@ -21,4 +21,12 @@ export const SelectContent = styled.div`
         border: 1px solid ${({theme}) => theme.COLORS.INPUT_BORDER};
         border-radius: .5rem;
     }
+
+    >select:focus {
+        outline: 2px solid #c9c9c9;
+    }
+    
+    >select:hover {
+            outline: 2px solid #c9c9c9;
+    }
 `;

@@ -37,5 +37,6 @@ export default {
        CONFIRM_BUTTON_BORDER: "#C9C9C9",
 
        ICON_COLOR: "#4D585E",
+       SHADOW_CARD_COLOR: "#999999",
     }
 };

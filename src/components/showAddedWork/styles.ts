@@ -41,6 +41,8 @@ export const Content = styled.div`
 
         border: 2px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
 
+        box-shadow: 2px 2px 5px 1px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
+
         position: relative;
 
         >button {

@@ -4,6 +4,8 @@ export const Container = styled.div`
 
   animation: fadein 1s;
 
+  box-shadow: 2px 2px 5px 1px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
+
     >.fadeout {
             animation: fadeout .5s;
     }
