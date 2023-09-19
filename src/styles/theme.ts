@@ -28,7 +28,7 @@ export default {
        
        CONFIRM_BUTTON: "#328B42",
        SELECT_BACKGROUND: "#F4FCF6EF",
-       BODY_BACKGROUND: "#FFFAF1",
+       BODY_BACKGROUND: "#E9E9E9",
        
        INPUT_BORDER: "#E5E5E5",
        LIST_BORDER: "#070734",

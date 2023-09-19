@@ -10,35 +10,70 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         flex: 1;
+
         align-items: center;
         justify-content: center;
 
-        margin: 10rem 5rem;
+        margin: 8rem 4rem;
         padding: 1rem;
         
         border: 1px solid ${({theme}) => theme.COLORS.HOME_SECTION_BORDER};
         border-radius: 5px;
 
-        >h1 {
-            font-family: 'Noto Sans', sans-serif;
-            font-size: 2.4rem;
-            color: ${({theme}) => theme.COLORS.LOGIN_FONT};
+        .logo {
+            margin: auto;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-style: italic;
+            font-size: 1.6rem;
+
+            @media(max-width: 1023px) {
+                display: none;
+            }
         }
 
-        >button {
-            width: 100%;
-            max-width: 30rem;
-            padding: 6px;
+        @media(min-width: 1024px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
 
-            border: 1px dotted ${({theme}) => theme.COLORS.HOME_SECTION_BORDER};
-            border-radius: 5px;
-            background-color: ${({theme}) => theme.COLORS.LIGHT_400};
-            
-            font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-            color: ${({theme}) => theme.COLORS.CONFIRM_BUTTON_FONT};
+            margin: 7rem;
         }
     }
+`;
+
+export const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    >h1 {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 2.4rem;
+        color: ${({theme}) => theme.COLORS.LOGIN_FONT};
+
+        margin: 2rem 0;
+    }
+
+    >button {
+        width: 100%;
+        max-width: 30rem;
+        padding: 6px;
+
+        border: 1px dotted ${({theme}) => theme.COLORS.HOME_SECTION_BORDER};
+        border-radius: 5px;
+        background-color: ${({theme}) => theme.COLORS.LIGHT_400};
+        
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        color: ${({theme}) => theme.COLORS.CONFIRM_BUTTON_FONT};
+
+        cursor: pointer;
+    }
+    
+    >button:hover {
+        box-shadow: 0px 0px 8px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
+    } 
 `;
 
 export const Form = styled.form`
@@ -49,6 +84,14 @@ export const Form = styled.form`
     max-width: 30rem;
 
     margin: 2rem 0;
+
+    >div {
+        margin-bottom: 5px;
+    }
+
+    >button:hover {
+        box-shadow: 0px 0px 8px ${({theme}) => theme.COLORS.CONFIRM_BUTTON};
+    }
 
     .error-style {
         font-family: 'Nato Sans', sans-serif;
