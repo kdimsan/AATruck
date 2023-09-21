@@ -12,6 +12,10 @@ export const Container = styled.div`
 
     border-bottom: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
 
+    @media(min-width: 1024px) {
+        padding: 0 5rem;
+    }
+
     >.side-out {
         animation: sidebarOut 0.4s ease-in-out;
     }
@@ -72,6 +76,10 @@ export const Sidebar = styled.div`
     
     animation: fadeinSidebar .5s ease-in-out;
 
+    @media(min-width: 1024px) {
+        width: 30%;
+    }
+
     >.sidebar-header {
        
         height: 10rem;
@@ -99,6 +107,12 @@ export const Sidebar = styled.div`
             >svg {
                 width: 2rem;
                 height: 2rem;
+            }
+        }
+
+        >div {
+            @media(min-width: 1024px) {
+                display: none;
             }
         }
     }

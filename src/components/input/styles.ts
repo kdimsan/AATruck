@@ -15,6 +15,7 @@ export const InputContent = styled.div`
         border: 1px solid ${({theme}) => theme.COLORS.INPUT_BORDER};
         border-radius: .5rem;
     }
+
     >input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
         -webkit-appearance: none;
         margin: 0;
@@ -30,7 +31,7 @@ export const InputContent = styled.div`
     }
     
     >input:hover {
-            outline: 2px solid #c9c9c9;
+        outline: 2px solid #c9c9c9;
     }
     
     >label {
@@ -38,5 +39,17 @@ export const InputContent = styled.div`
         font-size: 1.5rem;
 
         margin-bottom: 3px;
+    }
+
+    @media(min-width: 1024px) {
+        >input {
+            padding: .5rem 1.5rem;
+
+            font-size: 1.5rem;
+        }
+
+        >label {
+            font-size: 1.7rem;
+        }
     }
 `;

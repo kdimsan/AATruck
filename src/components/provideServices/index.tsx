@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Container , Form, ConfirmedServices, Service} from "./styles";
+import { Container, Content, Form, ConfirmedServices, Service} from "./styles";
 
 import { ShowProvidedServices } from "../showProvidedServices";
 import { VehicleForm } from "../vehicleForm";
 import { Select } from "../select";
 import { Input } from "../input";
+import { ConfirmButton } from "../confirmButton";
 
 type WorkDone = {
     work: string;
@@ -49,27 +50,29 @@ export function ProvidedServices() {
 
     return (
         <Container>
-            <h1>Services</h1>
-            <VehicleForm />
-            <Form>
-                <Select
-                    htmlFor="work"
-                    id="work"
-                    labelText="Select Work:"
-                    onChange={ handleSelectWork }
-                />
+            <Content>
+                <h1>Services</h1>
+                <VehicleForm />
+                <Form>
+                    <Select
+                        htmlFor="work"
+                        id="work"
+                        labelText="Select Work:"
+                        onChange={ handleSelectWork }
+                    />
 
-                <Input 
-                    htmlFor="price"
-                    id="price"
-                    labelText="Price:"
-                    type="number"
-                    placeholder="$XX,XX"
-                    value={ price.toString() }
-                    onChange={ handleInputPrice } 
-                />
-                <button onClick={ (e) => handleConfirmedServices(e) }>Confirm</button>
-            </Form>
+                    <Input 
+                        htmlFor="price"
+                        id="price"
+                        labelText="Price:"
+                        type="number"
+                        placeholder="$XX,XX"
+                        value={ price.toString() }
+                        onChange={ handleInputPrice } 
+                    />
+                    <ConfirmButton onClick={ handleConfirmedServices } title="Confirm"/>
+                </Form>
+            </Content>
             <ConfirmedServices>
                 <Service>
                     {

@@ -4,10 +4,14 @@ export const Container = styled.div`
 
   animation: fadein 1s;
 
-  box-shadow: 2px 2px 5px 1px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
+  border-radius: 5px;
+
+  margin: 2rem;
+
+  box-shadow: 1px 1px 5px 1px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
 
     >.fadeout {
-            animation: fadeout .5s;
+        animation: fadeout .5s;
     }
 
     >li {
@@ -15,14 +19,20 @@ export const Container = styled.div`
         flex-direction: column;
         
         list-style: none;
-
-        font-size: 1.3rem;
         
         padding: .25rem .5rem;
 
         border: 2px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
 
         position: relative;
+
+        >h4 {
+            font-size: 1.3rem;
+        }
+
+        >span {
+            font-size: 1.3rem;
+        }
 
         >button {
             width: 1.7rem;
@@ -34,11 +44,25 @@ export const Container = styled.div`
             top: .4rem;
             right: .2rem;
 
+            cursor: pointer;
+
             >svg {
                 width: 1.5rem;
                 height: 1.5rem;
             }
         }
+
+        @media(min-width: 1024px) {
+            padding: .5rem 1rem;
+            
+           >h4 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    @media(min-width: 1024px) {
+        margin: 0;
     }
 
     @keyframes fadein {

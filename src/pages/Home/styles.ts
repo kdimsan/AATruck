@@ -23,7 +23,7 @@ export const Content = styled.div`
         flex-direction: column;
         flex: 1;
 
-        margin: 2rem;
+        margin: 2rem 4rem;
 
         >h1 {
             font-family: 'Noto Sans', sans-serif;
@@ -44,16 +44,23 @@ export const PagesSection = styled.div`
     padding: 3rem 2rem;
     gap: 2rem;
 
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 1.8rem;
-
     border: 1px solid ${({theme}) => theme.COLORS.HOME_SECTION_BORDER};
     border-radius: .5rem;
 
     cursor: pointer;
 
+    @media(min-width: 1024px) {
+        gap: 3rem;
+    }
+
     >a {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 1.8rem;
         border-bottom: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
+
+        @media(min-width: 1024px) {
+            font-size: 2rem;
+        }
     }
 `;

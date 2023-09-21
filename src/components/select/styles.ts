@@ -29,4 +29,16 @@ export const SelectContent = styled.div`
     >select:hover {
             outline: 2px solid #c9c9c9;
     }
+
+    @media(min-width: 1024px) {
+        >select {
+            padding: .5rem 1.5rem;
+
+            font-size: 1.5rem;
+        }
+
+        >label {
+            font-size: 1.7rem;
+        }
+    }
 `;

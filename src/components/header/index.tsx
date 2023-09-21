@@ -39,10 +39,8 @@ export function Header() {
     return (
         <Container>
             <button className="icon" onClick={ handleSidebar }> <SlMenu /> </button>
-            {sidebar &&  
-                <Sidebar 
-                    className={ sideout ? "side-out" : "" }
-                >
+            {sidebar &&
+                <Sidebar className={ sideout ? "side-out" : "" }>
                     <div className='sidebar-header'>
                         <button className="icon" onClick={ handleSideout }> <SlClose  /> </button>
                         <Logo />

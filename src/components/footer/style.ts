@@ -12,6 +12,11 @@ export const Container = styled.div`
     margin-top: 3rem;
 
     border-top: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
+
+    @media(min-width: 1024px) {
+        height: 7rem;
+        min-height: 7rem;
+    }
     
     >h1 {
         font-family: 'IBM Plex Sans', sans-serif;

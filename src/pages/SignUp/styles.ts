@@ -19,6 +19,7 @@ export const Container = styled.div`
         
         border: 1px solid ${({theme}) => theme.COLORS.HOME_SECTION_BORDER};
         border-radius: 5px;
+        
         .logo {
             margin: auto;
             font-family: 'IBM Plex Sans', sans-serif;
@@ -86,9 +87,7 @@ export const Form = styled.form`
         margin-bottom: 5px ;
     }
 
-    >button:hover {
-        box-shadow: 0px 0px 8px ${({theme}) => theme.COLORS.CONFIRM_BUTTON};
-    }
+
 
     .error-style {
         font-family: 'Nato Sans', sans-serif;

@@ -12,4 +12,8 @@ export const Container = styled.button`
     background-color: ${({theme}) => theme.COLORS.CONFIRM_BUTTON};
 
     cursor: pointer;
+
+    @media(min-width: 1024px) {
+        font-size: 1.5rem;
+    }
 `;

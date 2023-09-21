@@ -30,9 +30,9 @@ export default {
        SELECT_BACKGROUND: "#F4FCF6EF",
        BODY_BACKGROUND: "#E9E9E9",
        
-       INPUT_BORDER: "#E5E5E5",
+       INPUT_BORDER: "#D9D9D9",
        LIST_BORDER: "#070734",
-       HEADER_BORDER: "#EBEBEB",
+       HEADER_BORDER: "#D9D9D9",
        HOME_SECTION_BORDER: "#C9C9C9",
        CONFIRM_BUTTON_BORDER: "#C9C9C9",
 

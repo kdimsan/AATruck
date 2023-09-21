@@ -1,12 +1,9 @@
-import { Container, VehicleInformation, Form } from "./styles";
+import { Container, VehicleInformation } from "./styles";
 
 export function VehicleForm() {
     
     return (
         <Container>
-            <Form>
-                 
-            </Form>
             <VehicleInformation>
                 <h2>Vehicle informations</h2>
                 <div>
