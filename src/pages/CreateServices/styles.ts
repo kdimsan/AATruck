@@ -4,6 +4,9 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
+    width: 100%;
+    height: 100vh;
+
     animation: movein 0.5s ease-in;
 
     >.move-out {
@@ -16,14 +19,18 @@ export const Content = styled.div`
     flex-direction: column;
     height: 100vh;
 
-    >button {
-            margin: 2rem 1.5rem;
-    }
-
     >main {
         display: flex;
         flex-direction: column;
         flex: 1;
+
+        >button {
+            margin: 2rem 1.5rem;
+        }
+
+        @media(min-width: 1024px) {
+            margin: 0 5rem;
+        }
     }
 `;
 

@@ -1,6 +1,7 @@
 import { useState, ChangeEvent } from "react";
+
+import { Container, AddedWork, Form } from "./styles";
 import { ConfirmButton } from "../confirmButton";
-import { Container, AddedWork } from "./styles";
 import { ShowAddedWork } from "../showAddedWork";
 import { Input } from "../input";
 
@@ -14,7 +15,8 @@ export function AddWork() {
     const [price, setPrice] = useState<number>(0);
     const [addedWork, setAddedWork] = useState<AddedWorkProps[]>([]);
     
-    const handleAddWork = () => {
+    const handleAddWork = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
         if(work && price) {
             const newWork: AddedWorkProps = {
                 work: work,
@@ -39,7 +41,8 @@ export function AddWork() {
 
     return (
         <Container> 
-                <h1>Create a work</h1>
+                <Form>
+                    <h1>Create a work</h1>
                     <Input
                         htmlFor="work"
                         labelText="Work"
@@ -59,8 +62,10 @@ export function AddWork() {
                         value={ price.toString() }
                     />
                     <ConfirmButton onClick={ handleAddWork } title={"Confirm"} />
+                </Form>
+                <AddedWork>
                     <p>All your registered works  can be viewed here</p>
-                    <AddedWork>
+                    <div>
                         {
                             addedWork.map((addedWork, index) => {
                                 return (
@@ -72,7 +77,8 @@ export function AddWork() {
                                 )
                             })
                         }
-                    </AddedWork>
+                    </div>
+                </AddedWork>
         </Container>
     )
 }

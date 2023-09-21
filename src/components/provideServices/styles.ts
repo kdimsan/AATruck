@@ -13,6 +13,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     margin: 0 2rem;
+
     >h1 {  
         font-family: 'Poppins', sans-serif;
         font-size: 2.5rem;
@@ -25,11 +26,11 @@ export const Content = styled.div`
             font-size: 3rem;
         }
     }
+    
     @media(min-width: 1024px) {
         min-width: 50rem;
-        max-width: 50rem;
+        max-width: 55rem;
     }
-
 `;
 
 export const Form = styled.form`
@@ -41,6 +42,7 @@ export const Form = styled.form`
     >button {
         margin-top: 1rem;
     }
+
     >button:hover {
         box-shadow: 0px 0px 8px ${({theme}) => theme.COLORS.CONFIRM_BUTTON};
     }
