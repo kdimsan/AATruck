@@ -27,10 +27,12 @@ export const Content = styled.div`
         >button {
             margin: 2rem 1.5rem;
         }
+    }
 
-        @media(min-width: 1024px) {
+    @media(min-width: 1024px) {
+        >main {
             margin: 0 5rem;
-        }
+        }    
     }
 `;
 

@@ -17,10 +17,18 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;
+
     >main {
         flex: 1;
         >button {
             margin: 2rem 1.5rem;
         }
+    }
+
+    @media(min-width: 1024px) {
+        
+        >main{
+            margin: 0 5rem;
+        }  
     }
 `;

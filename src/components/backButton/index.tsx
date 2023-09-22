@@ -9,7 +9,7 @@ export function BackButton({ onClick }: BackButtonProps) {
     return (
         <Container onClick={ onClick }>
             <FiChevronLeft />
-            <span>Voltar</span>
+            <span>Previous</span>
         </Container>
     )
 }

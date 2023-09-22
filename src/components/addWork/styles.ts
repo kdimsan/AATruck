@@ -7,7 +7,6 @@ export const Container = styled.div`
 
     margin: 0 2rem;
     
-    
     @media(min-width: 1024px) {
         display: grid;
         grid-template-areas: "a b";
