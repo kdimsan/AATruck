@@ -16,17 +16,22 @@ export interface ConfirmVehicle {
 }
 
 export function VehicleRegistration() {
-    const [vin, setVin] = useState<string>("");
-    const [plate, setPlate] = useState<string>("");
-    const [brand, setBrand] = useState<string>("");
-    const [model, setModel] = useState<string>("");
-    const [year, setYear] = useState<string>("");
+    const [vin, setVin] = useState("");
+    const [plate, setPlate] = useState("");
+    const [brand, setBrand] = useState("");
+    const [model, setModel] = useState("");
+    const [year, setYear] = useState("");
+    const [color, setColor] = useState("");
 
     const [confirmVehicle, setConfirmVehicle] = useState<ConfirmVehicle[]>([]);
     const [confirmButton, setConfirmButton] = useState(false);
     const [buttonsOrganizer, setButtonsOrganizer] = useState("none");
 
     const navigate = useNavigate();
+
+    const handleNavigateHome = () => {
+        navigate("/");
+    };
 
     const handleYearInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setYear(e.target.value);
@@ -43,10 +48,10 @@ export function VehicleRegistration() {
     const handleVinInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setVin(e.target.value);
     };
-
-    const handleNavigateHome = () => {
-        navigate("/");
+    const handleColorInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setVin(e.target.value);
     };
+
 
     const handleAddVehicle = () => {
         setButtonsOrganizer("none");
@@ -56,6 +61,7 @@ export function VehicleRegistration() {
         setVin("");
         setPlate("");
         setYear("");
+        setColor("")
     };
 
     const handleNavigateToWork = () => {
@@ -69,7 +75,8 @@ export function VehicleRegistration() {
                 brand: brand,
                 year: year,
                 model: model,
-                plate: plate
+                plate: plate,
+                color: color
             };
             setConfirmVehicle((prevState) => [...prevState, vehicleConfirmation]);
             setConfirmButton(true);
@@ -84,7 +91,7 @@ export function VehicleRegistration() {
             
             <h1>Register Vehicle</h1>
             <form>
-            <Input 
+                <Input 
                     labelText="Type the VIN number"
                     htmlFor="vin"
                     id="vin"
@@ -128,6 +135,15 @@ export function VehicleRegistration() {
                     placeholder="1980"
                     value={year}
                     onChange={ handleYearInput }
+                />
+                <Input 
+                    labelText="Vehicle color"
+                    htmlFor="color"
+                    id="color"
+                    type="text"
+                    placeholder="Ex.: Red"
+                    value={color}
+                    onChange={ handleColorInput }
                 />
             </form>
             <ConfirmButton 

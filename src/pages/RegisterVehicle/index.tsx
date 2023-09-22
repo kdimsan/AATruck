@@ -26,8 +26,8 @@ export function RegisterVehicle() {
                 onAnimationEnd={() => setMoveOut(false)} 
             >
                 <Header/>
-                <BackButton onClick={ handleRoute }/>
                 <main>
+                    <BackButton onClick={ handleRoute }/>
                     <VehicleRegistration/>
                 </main>
                 <Footer/>

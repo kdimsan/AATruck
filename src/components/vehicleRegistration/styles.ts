@@ -11,7 +11,7 @@ export const Container = styled.div`
         font-size: 2rem;
         color: ${({theme}) => theme.COLORS.HEADER_FONT};
 
-        margin-bottom: 1.5rem;
+        margin-bottom: 3rem;
 
         border-bottom: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
     }
@@ -24,6 +24,20 @@ export const Container = styled.div`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+    }
+
+    @media(min-width: 730px) {
+        >h1 {
+            font-size: 3rem;
+
+            margin-bottom: 3rem;
+        }
+
+        >form {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
     }
 `;
 
