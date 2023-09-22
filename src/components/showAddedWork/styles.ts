@@ -38,7 +38,7 @@ export const Content = styled.div`
 
     font-family: 'Poppins', sans-serif;
     
-    padding: .5rem 1rem;
+    padding: 1rem 2rem 1rem 1.5rem;
 
     border: 2px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
     border-radius: 5px;
@@ -62,8 +62,8 @@ export const Content = styled.div`
         background: none;
 
         position: absolute;
-        top: .4rem;
-        right: .2rem;
+        top: 4px;
+        right: 0px;
 
         cursor: pointer;
 
@@ -73,10 +73,39 @@ export const Content = styled.div`
         }
     }
 
+    @media(min-width: 600px) and (max-width: 1023px) {
+        >h4 {
+            font-size: 1.7rem;
+        }
+        >span {
+            font-size: 1.6rem;
+        }
+
+        >button {
+            >svg {
+                width: 1.7rem;
+                height: 1.7rem;
+            }
+        }
+    }
+
     @media(min-width: 1024px) {
-        padding: 1rem 1.5rem;
+        padding: 1rem 2rem 1rem 1.5rem;
 
         >h4 {
+            font-size: 1.5rem;
+        }
+        >span { 
+            font-size: 1.4rem;
+        }
+    }
+
+    @media(min-width: 1300px) {
+        >h4 {
+            font-size: 1.6rem;
+        }
+
+        >span { 
             font-size: 1.5rem;
         }
     }

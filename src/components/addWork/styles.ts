@@ -10,6 +10,8 @@ export const Container = styled.div`
     @media(min-width: 1024px) {
         display: grid;
         grid-template-areas: "a b";
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
     }
 `;
 
@@ -53,13 +55,13 @@ export const AddedWork = styled.div`
     }
 
    >div {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4rem;
     }
 
    @media(min-width: 1024px) {
-        margin: 1rem;
+        margin-top: 3rem;
 
         >div {
             gap: 1.6rem;

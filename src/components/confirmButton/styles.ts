@@ -15,6 +15,10 @@ export const Container = styled.button`
 
     cursor: pointer;
 
+    @media(min-width: 600px) and (max-width: 1023px) {
+        font-size: 1.7rem;
+    }
+
     @media(min-width: 1024px) {
         font-size: 1.5rem;
     }

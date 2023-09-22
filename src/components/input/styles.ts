@@ -41,6 +41,18 @@ export const InputContent = styled.div`
         margin-bottom: 3px;
     }
 
+    @media(min-width: 600px) and (max-width: 1023px) {
+        >input {
+            padding: .5rem 1.5rem;
+
+            font-size: 1.8rem;
+        }
+
+        >label {
+            font-size: 2rem;
+        }
+    }
+
     @media(min-width: 1024px) {
         >input {
             padding: .5rem 1.5rem;

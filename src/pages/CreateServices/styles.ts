@@ -29,6 +29,12 @@ export const Content = styled.div`
         }
     }
 
+    @media(min-width: 600px) and (max-width: 1023px) {
+        >main {
+            margin: 0 2rem;
+        }
+    }
+
     @media(min-width: 1024px) {
         >main {
             margin: 0 5rem;
