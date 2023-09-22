@@ -12,6 +12,10 @@ export const VehicleInformation = styled.div`
         color: ${({theme}) => theme.COLORS.HEADER_FONT};
     }
 
+    >div {
+        margin: 1rem .5rem 0;
+    }
+
     >div >h3 {
         margin: 3px 0;
 
@@ -32,6 +36,7 @@ export const VehicleInformation = styled.div`
         >div {
             margin: 1rem 1.3rem;
         }
+        
         >div>h3 {
             font-size: 1.6rem;
         }

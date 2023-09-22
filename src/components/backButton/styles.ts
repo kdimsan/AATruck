@@ -19,6 +19,7 @@ export const Container = styled.button`
     >span {
         font-family: 'Noto Sans', sans-serif;
         font-size: 2.4rem;
+        color: ${({theme}) => theme.COLORS.H2_FONT};
     }
 
     @media(min-width: 1024px) {

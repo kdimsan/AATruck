@@ -24,7 +24,7 @@ export default {
        VEHICLE_INFO_FONT: "#353541",
        CONFIRM_BUTTON_FONT: "#FFFFFF",
        LOGIN_FONT:"#303030",
-       
+       PREVIOUS_BUTTON_FONT: "#070734",
        
        CONFIRM_BUTTON: "#328B42",
        SELECT_BACKGROUND: "#F4FCF6EF",

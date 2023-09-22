@@ -1,11 +1,11 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-    margin: 0 2rem;
 
     @media(min-width: 1024px) {
         display: grid;
         grid-template-areas: "a b";
+        grid-template-columns: 1fr 1fr;
 
         margin: 0;
     }
@@ -29,7 +29,7 @@ export const Content = styled.div`
     
     @media(min-width: 1024px) {
         min-width: 50rem;
-        max-width: 55rem;
+        max-width: 70rem;
     }
 `;
 
@@ -50,37 +50,28 @@ export const Form = styled.form`
 
 export const ConfirmedServices = styled.div`
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    font-family: 'Poppins', sans-serif;
-
-    >h2 { 
-        font-size: 1.8rem;
-    }
-
-    >h3 {
-        font-weight: 400;
-    }
+    margin: 0 3rem;
 
     @media(min-width: 1024px) {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
 
-        margin: 1rem;
+        margin: 5rem 0 0 2rem;
+        max-width: 65rem;
     }
 `;
 
-export const Service = styled.div`
-    width: 100%;
-    
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+export const Service = styled.div` 
+    display: flex;
+    flex-wrap: wrap;
 
-    @media(min-width: 1024px) {
-        grid-gap: 2rem;
+    gap: 1.4rem;
+
+    @media(max-width: 353px) { 
+        justify-content: center;
     }
 `;
