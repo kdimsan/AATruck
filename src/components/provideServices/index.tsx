@@ -74,18 +74,19 @@ export function ProvidedServices() {
                 </Form>
             </Content>
             <ConfirmedServices>
+                    <p>Select here all works you have done</p>
                 <Service>
-                    {
-                        confirmedServices.map((service, index) => {
-                            return (
-                                <ShowProvidedServices 
-                                    key={ String(index) }
-                                    value={ service } 
-                                    onClick={ (deleted) => handleRemoveService(deleted) }
-                                />
-                            )
-                        })
-                    }
+                        {
+                            confirmedServices.map((service, index) => {
+                                return (
+                                    <ShowProvidedServices 
+                                        key={ String(index) }
+                                        value={ service } 
+                                        onClick={ (deleted) => handleRemoveService(deleted) }
+                                    />
+                                )
+                            })
+                        }
                 </Service>
             </ConfirmedServices>
         </Container>

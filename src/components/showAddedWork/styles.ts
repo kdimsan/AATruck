@@ -36,22 +36,21 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
 
-    font-family: 'Poppins', sans-serif;
-    
     padding: 1rem 2rem 1rem 1.5rem;
 
-    border: 2px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
     border-radius: 5px;
 
-    box-shadow: 2px 2px 5px 1px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
+    box-shadow: 1px 1px 5px 2px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
 
     position: relative;
 
     >h4 {
+        font-family: 'Poppins', sans-serif;
         font-size: 1.3rem;
     }
 
     >span {
+        font-family: 'Poppins', sans-serif;
         font-size: 1.3rem;
     }
 
@@ -63,7 +62,7 @@ export const Content = styled.div`
 
         position: absolute;
         top: 4px;
-        right: 0px;
+        right: 1px;
 
         cursor: pointer;
 
@@ -90,13 +89,19 @@ export const Content = styled.div`
     }
 
     @media(min-width: 1024px) {
-        padding: 1rem 2rem 1rem 1.5rem;
-
         >h4 {
             font-size: 1.5rem;
         }
+
         >span { 
             font-size: 1.4rem;
+        }
+
+        >button{
+            >svg {
+                width: 1.7rem;
+                height: 1.7rem;
+            }
         }
     }
 

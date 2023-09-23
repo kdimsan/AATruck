@@ -1,25 +1,21 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-    min-width: 15rem;
-
     animation: fadein 1s;
 
     border-radius: 5px;
 
-    box-shadow: 1px 1px 5px 1px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
+    box-shadow: 1px 1px 5px 2px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
 
     >.fadeout {
         animation: fadeout .5s;
     }
 
-    >li {
+    >div {
         display: flex;
         flex-direction: column;
         
-        list-style: none;
-        
-        padding: 1rem 1rem;
+        padding: 1rem 2rem 1rem 1.5rem;
 
         position: relative;
 
@@ -30,7 +26,7 @@ export const Container = styled.div`
 
         >span {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
 
         >button {
@@ -41,7 +37,7 @@ export const Container = styled.div`
 
             position: absolute;
             top: 4px;
-            right: 2px;
+            right: 1px;
 
             cursor: pointer;
 
@@ -53,16 +49,28 @@ export const Container = styled.div`
 
     }
 
-    @media(max-width: 353px) { 
-        min-width: 20rem;
+    @media(min-width: 600px) and (max-width: 1023px) {
+        >div {
+            >h4 {
+            font-size: 1.7rem;
+            }
+            >span {
+                font-size: 1.6rem;
+            }
+
+            >button {
+                >svg {
+                    width: 1.7rem;
+                    height: 1.7rem;
+                }
+            }
+        } 
     }
 
     @media(min-width: 1024px) {
-        min-width: 16rem;
-        
-        >li {
+        >div {
             >h4 {
-                font-size: 1.4rem;
+                font-size: 1.5rem;
             }
 
             >span {
@@ -70,9 +78,6 @@ export const Container = styled.div`
             }
 
             >button{
-                top: 4px;
-                right: 2px;
-                
                 >svg {
                     width: 1.7rem;
                     height: 1.7rem;
@@ -82,9 +87,7 @@ export const Container = styled.div`
     }
 
     @media(min-width: 1300px) {
-        min-width: 18rem;
-
-        >li {
+        >div {
             >h4 {
                 font-size: 1.6rem;
             }
@@ -94,7 +97,6 @@ export const Container = styled.div`
             }
         }
     }
-
 
     @keyframes fadein {
         0% {

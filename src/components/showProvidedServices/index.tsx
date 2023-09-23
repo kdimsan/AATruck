@@ -25,14 +25,14 @@ export function ShowProvidedServices( { value, onClick }: ShowServicesProps ) {
     
     return (
         <Container>
-            <li 
+            <div 
                 className={ fadingOut ? "fadeout" : "" }
                 onAnimationEnd={ () => setFadingOut(false) }
             >
                 <h4>{value.work}</h4>
                 <span>U$ {value.price.toFixed(2)}</span>
                 <button onClick={ handleRemoverClick }><IoCloseOutline /></button>
-            </li>
+            </div>
         </Container>
     )
 }

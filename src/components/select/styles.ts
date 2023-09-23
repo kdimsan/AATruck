@@ -30,6 +30,18 @@ export const SelectContent = styled.div`
             outline: 2px solid #c9c9c9;
     }
 
+    @media(min-width: 600px) and (max-width: 1023px) {
+        >select {
+            padding: .5rem 1.5rem;
+
+            font-size: 1.8rem;
+        }
+
+        >label {
+            font-size: 2rem;
+        }
+    }
+
     @media(min-width: 1024px) {
         >select {
             padding: .5rem 1.5rem;

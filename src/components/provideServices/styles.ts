@@ -49,11 +49,16 @@ export const Form = styled.form`
 `;
 
 export const ConfirmedServices = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     margin: 0 3rem;
+
+    >p { 
+        margin-bottom: 2rem;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 500;
+        font-style: italic;
+    }
 
     @media(min-width: 1024px) {
         display: flex;
@@ -70,8 +75,4 @@ export const Service = styled.div`
     flex-wrap: wrap;
 
     gap: 1.4rem;
-
-    @media(max-width: 353px) { 
-        justify-content: center;
-    }
 `;
