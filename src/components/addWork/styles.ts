@@ -33,14 +33,10 @@ export const Form = styled.form`
     >button {
         margin-top: 1rem;
     }
-    
-    >button:hover {
-        box-shadow: 0px 0px 8px ${({theme}) => theme.COLORS.CONFIRM_BUTTON};
-    }
 
     @media(min-width: 1024px) {
         min-width: 50rem;
-        max-width: 55rem;
+        max-width: 60rem;
     }
 `;
 
@@ -61,7 +57,7 @@ export const AddedWork = styled.div`
     }
 
    @media(min-width: 1024px) {
-        margin-top: 3rem;
+        margin: 3rem 5rem 0 0;
 
         >div {
             gap: 1.6rem;

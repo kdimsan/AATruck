@@ -27,7 +27,7 @@ export const Content = styled.div`
 
     @media(min-width: 1024px) {
         >main {
-            margin: 0 3rem;
+            margin: 0 5rem;
         }
     }
 `;

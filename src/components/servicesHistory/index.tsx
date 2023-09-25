@@ -1,35 +1,28 @@
 import { Container, History } from "./styles";
 
-interface ServicesHistoryProps {
-    value: string;
-}
-
-export function ServicesHistory( { value }: ServicesHistoryProps ) {
+export function ServicesHistory( ) {
     return (
         <Container>
-
-            {value ? <h2>Vehicle plate: { value }</h2> : ""}
-            
             <History>
                 <li>
-                    <span>Service: Wax</span>
-                    <span>Price: U$ 45,00</span>
-                    <span>Date: 20/05/2022</span>
+                    <h3>Service: <span>Wax</span></h3>
+                    <h3>Price: <span>U$: 45,00</span></h3>
+                    <h3>Date: <span>20/05/2023</span></h3>
                 </li>
                 <li>
-                    <span>Service: Wax</span>
-                    <span>Price: U$ 45,00</span>
-                    <span>Date: 20/05/2022</span>
+                    <h3>Service: <span>Wax</span></h3>
+                    <h3>Price: <span>U$: 45,00</span></h3>
+                    <h3>Date: <span>20/05/2023</span></h3>
                 </li>
                 <li>
-                    <span>Service: Wax</span>
-                    <span>Price: U$ 45,00</span>
-                    <span>Date: 20/05/2022</span>
+                    <h3>Service: <span>Wax</span></h3>
+                    <h3>Price: <span>U$: 45,00</span></h3>
+                    <h3>Date: <span>20/05/2023</span></h3>
                 </li>
                 <li>
-                    <span>Service: Wax</span>
-                    <span>Price: U$ 45,00</span>
-                    <span>Date: 20/05/2022</span>
+                    <h3>Service: <span>Wax</span></h3>
+                    <h3>Price: <span>U$: 45,00</span></h3>
+                    <h3>Date: <span>20/05/2023</span></h3>
                 </li>
             </History>
         </Container>

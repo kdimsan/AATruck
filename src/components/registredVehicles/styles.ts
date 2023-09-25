@@ -66,6 +66,12 @@ export const Content = styled.div`
         color: ${({theme}) => theme.COLORS.LIST_FONT};
         box-shadow: 1px 2px 5px 1px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
 
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 2px 3px 8px 3px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
+        }
+
         >h3 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.5rem;
@@ -90,25 +96,25 @@ export const Content = styled.div`
         }
     }
 
-    @media(min-width: 600px) and (max-width: 1023px) {
+    @media(min-width: 600px) and (max-width: 912px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
 
-        >div{
+        >div {
             padding: 1.6rem;
             margin-bottom: 0;
 
             >h3 {
-                font-size: 1.7rem;
+                font-size: 1.9rem;
             }
 
             >h4 {
-                font-size: 1.6rem;
+                font-size: 1.7rem;
                 line-height: 1.6rem;
 
                 >span {
-                    font-size: 1.5rem;
+                    font-size: 1.6rem;
                 }
             }
         }
@@ -140,7 +146,6 @@ export const Content = styled.div`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-
 
         >div {
             margin-bottom: 0;

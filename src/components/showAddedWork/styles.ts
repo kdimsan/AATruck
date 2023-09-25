@@ -36,7 +36,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
 
-    padding: 1rem 2rem 1rem 1.5rem;
+    padding: 1rem 2.5rem 1rem 1.5rem;
 
     border-radius: 5px;
 
@@ -62,7 +62,7 @@ export const Content = styled.div`
 
         position: absolute;
         top: 4px;
-        right: 1px;
+        right: 2px;
 
         cursor: pointer;
 

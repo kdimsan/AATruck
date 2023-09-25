@@ -3,22 +3,13 @@ import { styled } from "styled-components";
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-
-    >h2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        font-family: 'Noto Sans', sans-serif;
-        font-size: 1.4rem;
-    }
-
 `;
 
 export const History = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1.7rem;
 
     padding: 1rem;
 
@@ -32,12 +23,54 @@ export const History = styled.div`
 
         padding: 1rem 1rem;
 
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.3rem;
-        font-weight: 500;
-        color: ${({theme}) => theme.COLORS.LIST_FONT};
-
-        border: 1px solid ${({theme}) => theme.COLORS.LIST_BORDER};
         border-radius: .5rem;
+
+        box-shadow: 0px 0px 5px 1px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
+
+        >h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: ${({theme}) => theme.COLORS.LIST_FONT};
+
+            >span {
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.3rem;
+                font-weight: 500;
+                color: ${({theme}) => theme.COLORS.LIST_FONT};
+            }
+        }
+    }
+    //mobiles
+    @media(min-width: 190px) and (max-width: 465px) {
+        justify-content: center;
+    }
+    //tablet
+    @media(min-width: 650px) and (max-width: 912px) {
+        gap: 2.4rem;
+
+        >li {
+            >h3 {
+                font-size: 2.1rem;
+                >span {
+                    font-size: 2rem;
+                }
+            }
+        }
+        
+    }
+    //desktop
+    @media(min-width: 1024px) {
+        >li {
+            padding: 1rem 2rem 1rem 1rem;
+
+            >h3 {
+                font-size: 1.5rem;
+
+                >span {
+                    font-size: 1.4rem;
+                }
+            }
+        }
     }
 `;

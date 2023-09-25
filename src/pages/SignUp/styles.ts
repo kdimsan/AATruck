@@ -87,8 +87,6 @@ export const Form = styled.form`
         margin-bottom: 5px ;
     }
 
-
-
     .error-style {
         font-family: 'Nato Sans', sans-serif;
         color: red;

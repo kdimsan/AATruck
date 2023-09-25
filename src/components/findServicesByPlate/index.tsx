@@ -1,30 +1,16 @@
-import { useState } from "react";
-
 import { Container } from "./styles";
 import { ServicesHistory } from "../servicesHistory";
-import { Input } from "../input";
+
 
 export function FindServicesByPlate() {
 
-    const [plate, setPlate] = useState("");
-
-    const handlePlateInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setPlate(e.target.value);
-    };
+    //Get the plate by the previous page
 
     return(
         <Container>
-            <h1>Find services by vehicle plate</h1>
-           <Input 
-                labelText="Write the vehicle plate:"
-                htmlFor="plate"
-                id="plate"
-                type="text"
-                placeholder="ABC-123"
-                onChange={ handlePlateInput }
-           />
+            <h1>Plate: <span>ABC-123</span></h1>
             <h3>Services done</h3>
-            <ServicesHistory value={plate} />
+            <ServicesHistory/>
         </Container>
     )
 }

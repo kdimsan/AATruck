@@ -33,9 +33,9 @@ export function Home() {
                 <main>
                     <h1>Home</h1>
                     <PagesSection>
-                        <a onClick={ handleSelectServices }>Select work to do</a>
+                        <a onClick={ handleSelectServices }>Select services</a>
                         <a onClick={ handleServicesSearch }>Find Work by vehicle plate</a>
-                        <a onClick={ handleCreateServices }>Create a work</a>
+                        <a onClick={ handleCreateServices }>Create a service</a>
                         <a onClick={ handleRegisterVehicle }>Register vehicle</a>
                         <a onClick={ handleAllVehiclesRoute }>All vehicles</a>
                     </PagesSection>

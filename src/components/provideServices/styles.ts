@@ -42,10 +42,6 @@ export const Form = styled.form`
     >button {
         margin-top: 1rem;
     }
-
-    >button:hover {
-        box-shadow: 0px 0px 8px ${({theme}) => theme.COLORS.CONFIRM_BUTTON};
-    }
 `;
 
 export const ConfirmedServices = styled.div`

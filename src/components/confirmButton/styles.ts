@@ -15,6 +15,10 @@ export const Container = styled.button`
 
     cursor: pointer;
 
+    &:hover {
+        box-shadow: 1px 1px 5px ${({theme}) => theme.COLORS.CONFIRM_BUTTON};
+    }
+
     @media(min-width: 600px) and (max-width: 1023px) {
         font-size: 1.7rem;
     }

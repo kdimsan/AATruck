@@ -19,7 +19,7 @@ export function RegistredVehicles() {
             <Content>
                 <div>
                     <h3>Plate: plate</h3>
-                    <h4>VIN: <span>vin</span></h4>
+                    <h4>VIN: <span>XXXXXXXXXXXXXXXXX</span></h4>
                     <h4>Brand: <span>brand</span></h4>
                     <h4>Model: <span>model</span></h4>
                     <h4>Year: <span>year</span></h4>

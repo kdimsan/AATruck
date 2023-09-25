@@ -12,10 +12,6 @@ export const Container = styled.div`
 
     border-bottom: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
 
-    @media(min-width: 1024px) {
-        padding: 0 5rem;
-    }
-
     >.side-out {
         animation: sidebarOut 0.4s ease-in-out;
     }
@@ -41,6 +37,24 @@ export const Container = styled.div`
             width: 2rem;
             height: 2rem;
         }
+    }
+
+    @media(min-width: 650px) and (max-width: 912px) {
+        padding: 0 3rem;
+
+        >button{
+            width: 2.8rem; 
+            height: 2.8rem;
+            
+            >svg {
+                width: 2.8rem;
+                height: 2.8rem;
+            }
+        } 
+    }
+
+    @media(min-width: 1024px) {
+        padding: 0 5rem;
     }
 
     @keyframes sidebarOut {
@@ -76,10 +90,6 @@ export const Sidebar = styled.div`
     
     animation: fadeinSidebar .5s ease-in-out;
 
-    @media(min-width: 1024px) {
-        width: 30%;
-    }
-
     >.sidebar-header {
        
         height: 10rem;
@@ -109,18 +119,13 @@ export const Sidebar = styled.div`
                 height: 2rem;
             }
         }
-
-        >div {
-            @media(min-width: 1024px) {
-                display: none;
-            }
-        }
     }
 
     >.sidebar-content {
         padding: 2rem;
         display: flex;
         flex-direction: column;
+
         >a {
             font-size: 2rem;
             font-family: 'Noto Sans', sans-serif;
@@ -130,6 +135,42 @@ export const Sidebar = styled.div`
             border-bottom: 1px solid ${({theme}) => theme.COLORS.HEADER_BORDER};
 
             cursor: pointer;
+        }
+    }
+
+    @media(min-width: 650px) and (max-width: 912px) {
+        width: 50%;
+
+        .sidebar-header {
+            >button {
+                width: 3rem;
+                height: 3rem;
+
+                >svg {
+                    width: 2.8rem;
+                    height: 2.8rem;
+                }
+            }
+        }
+
+        .sidebar-content {
+            >a {
+                font-size: 2.5rem;
+
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    @media(min-width: 1024px) {
+        width: 30%;
+
+        .sidebar-header {
+            >div {
+                @media(min-width: 1024px) {
+                    display: none;
+                }
+            }
         }
     }
 
