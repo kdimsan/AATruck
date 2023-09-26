@@ -5,7 +5,7 @@ export const Container = styled.div`
 
     border-radius: 5px;
 
-    box-shadow: 1px 1px 5px 2px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
+    box-shadow: 1px 1px 5px 2px ${({theme}) => theme.COLORS.CARD_SHADOW_COLOR};
 
     >.fadeout {
         animation: fadeout .5s;

@@ -34,9 +34,9 @@ export default {
        LIST_BORDER: "#070734",
        HEADER_BORDER: "#D9D9D9",
        HOME_SECTION_BORDER: "#C9C9C9",
-       CONFIRM_BUTTON_BORDER: "#C9C9C9",
+       BOTTOM_BORDER_INFOS: "#DBDBDB",
 
        ICON_COLOR: "#4D585E",
-       SHADOW_CARD_COLOR: "#636363",
+       CARD_SHADOW_COLOR: "#636363",
     }
 };

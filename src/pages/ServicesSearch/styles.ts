@@ -19,19 +19,11 @@ export const Content = styled.div`
     
     >main { 
         flex: 1;
-
-        >button {
-            margin: 2rem 1.5rem;
-        }
     }
 
     @media(min-width: 650px) and (max-width: 912px) {
         >main {
             margin: 0 4rem;
-
-            >button {
-                margin: 3rem 1.4rem 2rem;
-            }
         }
     }
 

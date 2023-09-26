@@ -74,7 +74,7 @@ export function ProvidedServices() {
                 </Form>
             </Content>
             <ConfirmedServices>
-                    <p>Select here all works you have done</p>
+                    <p>Select here all services you have done</p>
                 <Service>
                         {
                             confirmedServices.map((service, index) => {

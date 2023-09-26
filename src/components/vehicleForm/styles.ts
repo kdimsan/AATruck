@@ -12,32 +12,37 @@ export const VehicleInformation = styled.div`
         color: ${({theme}) => theme.COLORS.HEADER_FONT};
     }
 
-    >div {
-        margin: 1rem .5rem 0;
-    }
-
-    >div >h3 {
-        margin: 3px 0;
-
-        font-family: 'Poppins',sans-serif;
-        font-size: 1.3rem;
-        color: ${({theme}) => theme.COLORS.VEHICLE_INFO_FONT};
-
-        border-bottom: 1px solid ${({theme}) => theme.COLORS.INPUT_BORDER};
-    }
-
     @media(min-width: 1024px) {
         margin: 3rem 0;
         
         >h2 {
             font-size: 2.1rem;
         }
+    }
+`;
 
-        >div {
-            margin: 1rem 1.3rem;
+export const Content = styled.div`
+    margin: 1rem .5rem 0;
+
+    >h3 {
+        margin: 3px 0;
+
+        font-family: 'Poppins',sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: ${({theme}) => theme.COLORS.VEHICLE_INFO_FONT};
+
+        border-bottom: 1px solid ${({theme}) => theme.COLORS.INPUT_BORDER};
+
+        >span {
+            font-weight: 500;
         }
-        
-        >div>h3 {
+    }
+
+    @media(min-width: 1024px) {
+        margin: 1rem 1.3rem;
+
+        >h3 {
             font-size: 1.6rem;
         }
     }

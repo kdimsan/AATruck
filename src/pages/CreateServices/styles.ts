@@ -23,10 +23,6 @@ export const Content = styled.div`
         display: flex;
         flex-direction: column;
         flex: 1;
-
-        >button {
-            margin: 2rem 1.5rem;
-        }
     }
 
     @media(min-width: 600px) and (max-width: 1023px) {

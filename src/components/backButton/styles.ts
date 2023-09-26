@@ -4,6 +4,8 @@ export const Container = styled.button`
     display: flex;
     align-items: center;
 
+    margin: 3rem 1.6rem 2rem;
+
     background: none;
     border: none;
 
@@ -21,6 +23,8 @@ export const Container = styled.button`
     }
 
     @media(min-width: 650px) and (max-width: 912px) {
+        margin: 3rem 1.4rem 2rem;
+
         >svg {
             width: 2.6rem;
             height: 2.6rem;
@@ -32,10 +36,13 @@ export const Container = styled.button`
     }
 
     @media(min-width: 1024px) {
+        margin: 3.5rem 1.4rem 2rem;
+
         >svg {
             width: 2.2rem;
             height: 2.2rem;
         }
+
         >span {
             font-size: 2.7rem;
         }

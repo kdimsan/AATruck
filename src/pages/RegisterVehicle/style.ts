@@ -19,10 +19,6 @@ export const Content = styled.div`
 
     >main {
         flex: 1;
-
-        >button {
-            margin: 2rem 1.5rem;
-        }
     }
 
     @media(min-width: 1024px) {

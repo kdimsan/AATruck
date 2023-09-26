@@ -64,12 +64,12 @@ export const Content = styled.div`
         border-radius: 5px;
 
         color: ${({theme}) => theme.COLORS.LIST_FONT};
-        box-shadow: 1px 2px 5px 1px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
+        box-shadow: 1px 2px 5px 1px ${({theme}) => theme.COLORS.CARD_SHADOW_COLOR};
 
         cursor: pointer;
 
         &:hover {
-            box-shadow: 2px 3px 8px 3px ${({theme}) => theme.COLORS.SHADOW_CARD_COLOR};
+            box-shadow: 2px 3px 8px 3px ${({theme}) => theme.COLORS.CARD_SHADOW_COLOR};
         }
 
         >h3 {

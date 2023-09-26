@@ -23,13 +23,25 @@ export const Content = styled.div`
         flex-direction: column;
         flex: 1;
 
-        margin: 2rem 4rem;
+        margin: 2rem 2rem;
 
         >h1 {
             font-family: 'Noto Sans', sans-serif;
             font-size: 2.5rem;
             font-weight: 600;
             color: ${({theme}) => theme.COLORS.LIST_FONT};
+        }
+    }
+
+    @media(min-width: 600px) and (max-width: 1023px) {
+        >main {
+            margin: 2rem 5rem;
+        }
+    }
+
+    @media(min-width: 1024px) {
+        >main {
+            margin: 2rem 6rem;
         }
     }
 `;
