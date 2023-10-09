@@ -1,38 +1,39 @@
 import { useState } from "react";
 import { Container } from "./styles";
-import { IoCloseOutline } from 'react-icons/io5';
+import { IoCloseOutline } from "react-icons/io5";
 
 type ServiceType = {
-    work: string;
-    price: number;
-}
+  work: string;
+  price: number;
+};
 
 export interface ShowServicesProps {
-    value: ServiceType;
-    onClick: (value: ServiceType) => void;
+  value: ServiceType;
+  onClick: (value: ServiceType) => void;
 }
 
-export function ShowProvidedServices( { value, onClick }: ShowServicesProps ) {
+export function ShowProvidedServices({ value, onClick }: ShowServicesProps) {
+  const [fadingOut, setFadingOut] = useState(false);
 
-    const [fadingOut, setFadingOut] = useState(false);
+  const handleRemoverClick = () => {
+    setFadingOut(true);
+    setTimeout(() => {
+      onClick(value);
+    }, 300);
+  };
 
-    const handleRemoverClick = () => {
-        setFadingOut(true);
-        setTimeout(() => {
-            onClick(value);
-        }, 300);
-    };
-    
-    return (
-        <Container>
-            <div 
-                className={ fadingOut ? "fadeout" : "" }
-                onAnimationEnd={ () => setFadingOut(false) }
-            >
-                <h4>{value.work}</h4>
-                <span>U$ {value.price.toFixed(2)}</span>
-                <button onClick={ handleRemoverClick }><IoCloseOutline /></button>
-            </div>
-        </Container>
-    )
+  return (
+    <Container>
+      <div
+        className={fadingOut ? "fadeout" : ""}
+        onAnimationEnd={() => setFadingOut(false)}
+      >
+        <h4>{value.work}</h4>
+        <span>U$ {value.price.toFixed(2)}</span>
+        <button onClick={handleRemoverClick}>
+          <IoCloseOutline />
+        </button>
+      </div>
+    </Container>
+  );
 }

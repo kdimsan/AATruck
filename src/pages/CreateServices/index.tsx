@@ -7,28 +7,28 @@ import { BackButton } from "../../components/backButton";
 import { Container, Content } from "./styles";
 
 export function CreateServices() {
-    const navigate = useNavigate();
-    const [moveOut, setMoveOut] = useState(false);
+  const navigate = useNavigate();
+  const [moveOut, setMoveOut] = useState(false);
 
-    const handleBackButton = () => {
-        setMoveOut(true);
-        setTimeout(() => {
-            navigate(-1);
-        }, 400);
-    }
-    return (
-        <Container>
-            <Content 
-                className={ moveOut ? "move-out" : "" }
-                onAnimationEnd={() => setMoveOut(false)} 
-            >
-                <Header />
-                <main>
-                    <BackButton onClick={handleBackButton} />
-                    <AddWork />
-                </main>
-                <Footer />
-            </Content>
-        </Container>
-    )
+  const handleBackButton = () => {
+    setMoveOut(true);
+    setTimeout(() => {
+      navigate(-1);
+    }, 400);
+  };
+  return (
+    <Container>
+      <Content
+        className={moveOut ? "move-out" : ""}
+        onAnimationEnd={() => setMoveOut(false)}
+      >
+        <Header />
+        <main>
+          <BackButton onClick={handleBackButton} />
+          <AddWork />
+        </main>
+        <Footer />
+      </Content>
+    </Container>
+  );
 }

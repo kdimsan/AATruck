@@ -7,32 +7,30 @@ import { Footer } from "../../components/footer";
 import { BackButton } from "../../components/backButton";
 import { ProvidedServices } from "../../components/provideServices";
 
-
 export function SelectServices() {
-    
-    const navigate = useNavigate();
-    const [moveOut, setMoveOut] = useState(false);
+  const navigate = useNavigate();
+  const [moveOut, setMoveOut] = useState(false);
 
-    const handleRoute = () => {
-        setMoveOut(true);
-        setTimeout(() => {
-            navigate(-1);
-        }, 400);
-    };
+  const handleRoute = () => {
+    setMoveOut(true);
+    setTimeout(() => {
+      navigate(-1);
+    }, 400);
+  };
 
-    return (
-        <Container>
-            <Content 
-                className={ moveOut ? "move-out" : "" }
-                onAnimationEnd={ () => setMoveOut(false) }
-            >
-                <Header />
-                <main>
-                    <BackButton onClick={ handleRoute } />
-                    <ProvidedServices />
-                </main>
-                <Footer />
-            </Content>
-        </Container>
-    )
+  return (
+    <Container>
+      <Content
+        className={moveOut ? "move-out" : ""}
+        onAnimationEnd={() => setMoveOut(false)}
+      >
+        <Header />
+        <main>
+          <BackButton onClick={handleRoute} />
+          <ProvidedServices />
+        </main>
+        <Footer />
+      </Content>
+    </Container>
+  );
 }
